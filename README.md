@@ -1,33 +1,33 @@
 # RPG GAME
 
- > Authors: [Michael Dong](https://github.com/toothnnail), [Sarah Ramirez](https://github.com/Sarah-Rami27), [Nicholas Tengbumroong](https://github.com/nicholastengbumroong)
+  Authors: [Michael Dong](https://github.com/toothnnail), [Sarah Ramirez](https://github.com/Sarah-Rami27), [Nicholas Tengbumroong](https://github.com/nicholastengbumroong)
 
  ### General Description:
  >  
- > Our project is similar to an "infinite" roguelike text-based rpg, in which the player advances through randomly generated dungeon rooms. These rooms contain randomly generated enemies whose stats scale with the room number. Every fixed interval, the player is presented with a boss encounter, awarding the player with a choice of a perk. A perk may be a stat boost or new combat effect (e.g. ATK+2 or double hit). The game will save the players high score (highest room level achieved). There is a loot system in which the player will receive items for clearing a floor. These items will provide the player with stat boosts as they progress through the game. 
+  Our project is similar to an "infinite" roguelike text-based rpg, in which the player advances through randomly generated dungeon rooms. These rooms contain randomly generated enemies whose stats scale with the room number. Every fixed interval, the player is presented with a boss encounter, awarding the player with a choice of a perk. A perk may be a stat boost or new combat effect (e.g. ATK+2 or double hit). The game will save the players high score (highest room level achieved). There is a loot system in which the player will receive items for clearing a floor. These items will provide the player with stat boosts as they progress through the game. 
  > 
  ### Why is it important?
- > One of our common interests is games. We wanted to try creating a game ourselves, adding our own flavor to it. We were curious about what goes behind the design of games such as character types and dungeon generation, so we decided to base our project around a rougelike rpg game that would implement these aspects. 
+  One of our common interests is games. We wanted to try creating a game ourselves, adding our own flavor to it. We were curious about what goes behind the design of games such as character types and dungeon generation, so we decided to base our project around a rougelike rpg game that would implement these aspects. 
  > 
  ### Language/Tools/Technologies
- > * [C++](https://www.cplusplus.com/) - Progamming language
- > * [Git](https://git-scm.com/) - Version control system 
- > * [Github](https://github.com/) - Holds our repository and kanban board for organizing our workflow. 
- > * [VSCode](https://code.visualstudio.com/) - Primary code editor we will use to create our program.
- > * [CMake](https://cmake.org/) - Software for building code into an executable we can run. 
- > * [Google Test Framework](https://github.com/google/googletest) - A collection of tests that we use to unit test our code. 
+  * [C++](https://www.cplusplus.com/) - Progamming language
+  * [Git](https://git-scm.com/) - Version control system 
+  * [Github](https://github.com/) - Holds our repository and kanban board for organizing our workflow. 
+  * [VSCode](https://code.visualstudio.com/) - Primary code editor we will use to create our program.
+  * [CMake](https://cmake.org/) - Software for building code into an executable we can run. 
+  * [Google Test Framework](https://github.com/google/googletest) - A collection of tests that we use to unit test our code. 
  
  ### Inputs/Outputs
- > #### Inputs: 
- > > The user will be able to make choices as they progress throughout the game. This will be in the form of combat decisions, accessing/using items from inventory, and choosing whether or not to equip new items.  
- > #### Outputs: 
- > > The program will output to text the console. This text will be in the form of prompts, room/enemy description, combat options, etc.  
+  #### Inputs: 
+   The user will be able to make choices as they progress throughout the game. This will be in the form of combat decisions, accessing/using items from inventory,   and choosing whether or not to equip new items.  
+  #### Outputs: 
+   The program will output to text the console. This text will be in the form of prompts, room/enemy description, combat options, etc.  
  
  ### Design Patterns
- > #### Decorator: 
- > > The decorator design pattern will serve as the basis for our perk system. It will let us attach perks to the player character's equipment as they progress through the game. These perks will be able to stack and have interactions with each other and at any point in the game the character will be able to have multiple perks on them. They will be added or removed depending on actions in the game. We anticpate having issues with modifying the behavior of the player's equipment after the object has already been created. The decorator class allows us to wrap the equipment objects with perks that will alter the behavior or stats of the item.
- > #### Abstract Factory:
- > > The abstract factory design pattern allows us to have a base character class. This would have multiple playable character variants that the user will be able to choose at the beginning of the game (e.g. fighter/rogue/etc.). We anticipate having issues with maintaining/organizing several distinct character types. Using the abstract factory design pattern lets us have a single basic character interface that will then be implemented by the different character types.
+  #### Decorator: 
+  The decorator design pattern will serve as the basis for our perk system. It will let us attach perks to the player character's equipment as they progress through the game. These perks will be able to stack and have interactions with each other and at any point in the game the character will be able to have multiple perks on them. They will be added or removed depending on actions in the game. We anticpate having issues with modifying the behavior of the player's equipment after the object has already been created. The decorator class allows us to wrap the equipment objects with perks that will alter the behavior or stats of the item.
+  #### Abstract Factory:
+  The abstract factory design pattern allows us to have a base character class. This would have multiple playable character variants that the user will be able to choose at the beginning of the game (e.g. fighter/rogue/etc.). We anticipate having issues with maintaining/organizing several distinct character types. Using the abstract factory design pattern lets us have a single basic character interface that will then be implemented by the different character types.
  
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to 
