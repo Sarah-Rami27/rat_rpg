@@ -29,20 +29,10 @@
   #### Abstract Factory:
   The abstract factory design pattern allows us to have a base character class. This would have multiple playable character variants that the user will be able to choose at the beginning of the game (e.g. fighter/rogue/etc.). We anticipate having issues with maintaining/organizing several distinct character types. Using the abstract factory design pattern lets us have a single basic character interface that will then be implemented by the different character types.
  
- > ## Phase II
- > In addition to completing the "Class Diagram" section below, you will need to 
- > * Set up your GitHub project board as a Kanban board for the project. It should have columns that map roughly to 
- >   * Backlog, TODO, In progress, In testing, Done
- >   * You can change these or add more if you'd like, but we should be able to identify at least these.
- > * There is no requirement for automation in the project board but feel free to explore those options.
- > * Create an "Epic" (note) for each feature and each design pattern and assign them to the appropriate team member. Place these in the `Backlog` column
- > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
- >   * Create smaller development tasks as issues and assign them to team members. Place these in the `TODO` column.
- >   * These cards should represent roughly 7 days worth of development time for your team, taking you until your first meeting with the TA
-## Class Diagram
+### Class Diagram
 ![OMT Diagram](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/master/omt/CS100%20Project.png)
-  The CharacterFactory class is an implemenation of the Abstract Factory design pattern. It is the interface that the concrete classes, WarriorFactory and MageFactory implement. These two concrete factories will each produce their own version of a Character object. The same applies to both the armor and weapon classes. This allows us to have an associated family of objects within their respective types, such as Warrior or Mage.
-  In addition, the Weapon class utilizes the Decorator design pattern to allow us to change certain attributes of any given weapon object. So while the weapon can either be a Warrior weapon or a Mage weapon, we also have the ability to apply perks (decorations) to these objects. The WeaponDecorator class extends the abstract Weapon class and then is extended by several differnt perk classes. Each of these classes modify a specific attribute of the weapon. 
+The CharacterFactory class is an implemenation of the Abstract Factory design pattern. It is the interface that the concrete classes, WarriorFactory and MageFactory implement. These two concrete factories will each produce their own version of a Character object. The same applies to both the armor and weapon classes. This allows us to have an associated family of objects within their respective types, such as Warrior or Mage.
+In addition, the Weapon class utilizes the Decorator design pattern to allow us to change certain attributes of any given weapon object. So while the weapon can either be a Warrior weapon or a Mage weapon, we also have the ability to apply perks (decorations) to these objects. The WeaponDecorator class extends the abstract Weapon class and then is extended by several differnt perk classes. Each of these classes modify a specific attribute of the weapon. 
  
  > ## Phase III
  > You will need to schedule a check-in with the TA (during lab hours or office hours). Your entire team must be present. 
