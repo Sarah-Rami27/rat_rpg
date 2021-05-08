@@ -4,7 +4,7 @@
 
  ### General Description:
  >  
-  Our project is similar to an "infinite" roguelike text-based rpg, in which the player advances through randomly generated dungeon rooms. These rooms contain randomly generated enemies whose stats scale with the room number. Every fixed interval, the player is presented with a boss encounter, awarding the player with a choice of a perk. A perk may be a stat boost or new combat effect (e.g. ATK+2 or double hit). The game will save the players high score (highest room level achieved). There is a loot system in which the player will receive items for clearing a floor. These items will provide the player with stat boosts as they progress through the game. 
+  Our project is similar to an "infinite" roguelike text-based rpg, in which the player advances through randomly generated dungeon rooms. These rooms contain randomly generated enemies whose stats scale with the room number. Every fixed interval, the player is presented with a boss encounter, awarding the player with a choice of a perk. A perk may be a stat boost or new combat effect (e.g. ATK+2 or double hit). The game will save the players high score (highest room level achieved). There is a loot system in which the player will receive items for clearing a floor. These items will provide the player with stat boosts as they progress through the game. The player will have a choice of character type at the beginning of the game which will determine the different loot they will get throughtout thr game. 
  > 
  ### Why is it important?
   One of our common interests is games. We wanted to try creating a game ourselves, adding our own flavor to it. We were curious about what goes behind the design of games such as character types and dungeon generation, so we decided to base our project around a rougelike rpg game that would implement these aspects. 
@@ -27,20 +27,12 @@
   #### Decorator: 
   The decorator design pattern will serve as the basis for our perk system. It will let us attach perks to the player character's equipment as they progress through the game. These perks will be able to stack and have interactions with each other and at any point in the game the character will be able to have multiple perks on them. They will be added or removed depending on actions in the game. We anticpate having issues with modifying the behavior of the player's equipment after the object has already been created. The decorator class allows us to wrap the equipment objects with perks that will alter the behavior or stats of the item.
   #### Abstract Factory:
-  The abstract factory design pattern allows us to have a base character class. This would have multiple playable character variants that the user will be able to choose at the beginning of the game (e.g. fighter/rogue/etc.). We anticipate having issues with maintaining/organizing several distinct character types. Using the abstract factory design pattern lets us have a single basic character interface that will then be implemented by the different character types.
+  The abstract factory design pattern allows us to have a base character class. This would have multiple playable character variants that the user will be able to choose at the beginning of the game (e.g. fighter/rogue/etc.). We anticipate having issues with maintaining/organizing several distinct character types. Using the abstract factory design pattern lets us have a single basic character interface that will then be implemented by the different character types. Each character type will have their different associated weapons and armor.
  
- > ## Phase II
- > In addition to completing the "Class Diagram" section below, you will need to 
- > * Set up your GitHub project board as a Kanban board for the project. It should have columns that map roughly to 
- >   * Backlog, TODO, In progress, In testing, Done
- >   * You can change these or add more if you'd like, but we should be able to identify at least these.
- > * There is no requirement for automation in the project board but feel free to explore those options.
- > * Create an "Epic" (note) for each feature and each design pattern and assign them to the appropriate team member. Place these in the `Backlog` column
- > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
- >   * Create smaller development tasks as issues and assign them to team members. Place these in the `TODO` column.
- >   * These cards should represent roughly 7 days worth of development time for your team, taking you until your first meeting with the TA
-## Class Diagram
- > Include a class diagram(s) for each design pattern and a description of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper OMT notation (as discussed in the course slides). You may combine multiple design patterns into one diagram if you'd like, but it needs to be clear which portion of the diagram represents which design pattern (either in the diagram or in the description). 
+### Class Diagram
+![OMT Diagram](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/master/omt/CS100%20Project.png)
+The CharacterFactory class is an implemenation of the Abstract Factory design pattern. It is the interface that the concrete classes, WarriorFactory and MageFactory implement. These two concrete factories will each produce their own version of a Character object. The same applies to both the armor and weapon classes. This allows us to have an associated family of objects within their respective types, such as Warrior or Mage.
+In addition, the Weapon class utilizes the Decorator design pattern to allow us to change certain attributes of any given weapon object. So while the weapon can either be a Warrior weapon or a Mage weapon, we also have the ability to apply perks (decorations) to these objects. The WeaponDecorator class extends the abstract Weapon class and then is extended by several differnt perk classes. Each of these classes modify a specific attribute of the weapon. 
  
  > ## Phase III
  > You will need to schedule a check-in with the TA (during lab hours or office hours). Your entire team must be present. 
