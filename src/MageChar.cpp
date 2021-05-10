@@ -4,7 +4,7 @@
 #include "../header/MageChar.h"
 
 MageChar::MageChar() {
-    this->name = "Remy The Rat";
+    this->name = "Emile The Rat";
     this->atk = 0; 
     this->def = 0;
     this->hp = 0; 
