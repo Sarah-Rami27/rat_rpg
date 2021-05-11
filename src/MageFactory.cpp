@@ -4,7 +4,7 @@
 #include "../header/MageFactory.h"
 #include "../header/MageChar.h"
 
-MageFactory::~MageFactory() {
+MageFactory::MageFactory() {
 
 }
 
