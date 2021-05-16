@@ -4,11 +4,14 @@
 #include "../header/Game.h"
 
 Game::Game() {
-
+    factory = nullptr;
+    player = nullptr;
+    levelNum = 0; 
 }
 
 Game::~Game() {
-
+    delete factory; 
+    delete player; 
 }
 
 void Game::setFactory(int charType) {
