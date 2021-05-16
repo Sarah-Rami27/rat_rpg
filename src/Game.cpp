@@ -43,7 +43,8 @@ void Game::spawnLoot() {
 }
 
 void Game::startCombat() {
-    //Enemy * enemy = spawnEnemy();
+    spawnEnemy();
+
     while(player->getHp() > 0 && enemy->getHp() > 0){
 
         player->attack(enemy);                              //player attacks first
@@ -57,7 +58,7 @@ void Game::startCombat() {
             return;
         }
 
-        if(player->getHp() <= 0 && enemy->getHp() > 0){ //enemy wins
+        if(player->getHp() <= 0 && enemy->getHp() > 0){     //enemy wins
             //cout << "ggwp" << endl;
             return;
         }
