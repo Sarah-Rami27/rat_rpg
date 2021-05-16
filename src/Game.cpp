@@ -7,11 +7,14 @@
 using namespace std;
 
 Game::Game() {
-
+    factory = nullptr;
+    player = nullptr;
+    levelNum = 0; 
 }
 
 Game::~Game() {
-
+    delete factory; 
+    delete player; 
 }
 
 void Game::setFactory(int charType) {
@@ -28,7 +31,7 @@ void Game::displayOptions() {
 }
 
 void Game::createPlayer() {
-    this->player = factory->createCharacter(); 
+    this->player = this->factory->createCharacter(); 
 }
 
 void Game::spawnEnemy() {
