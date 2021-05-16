@@ -15,7 +15,7 @@ class Character {
     public:
         virtual void attack() = 0; 
         virtual void defend() = 0; 
-        virtual void reduceHealth() = 0; 
+        virtual void reduceHealth(double damage) = 0; 
 };
 
 #endif 

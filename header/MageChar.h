@@ -10,7 +10,7 @@ class MageChar: public Character {
         ~MageChar(); 
         void attack(); 
         void defend(); 
-        void reduceHealth(); 
+        void reduceHealth(double damage); 
 
 };
 
