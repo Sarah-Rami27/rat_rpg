@@ -12,6 +12,7 @@ int main() {
     displayCharacterOptions(); 
     cin >> userInput; 
     game.setFactory(userInput);
+    game.createPlayer(); 
 
     return 0;
 }

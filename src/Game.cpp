@@ -25,7 +25,7 @@ void Game::displayOptions() {
 }
 
 void Game::createPlayer() {
-    this->player = factory->createCharacter(); 
+    this->player = this->factory->createCharacter(); 
 }
 
 void Game::spawnEnemy() {
