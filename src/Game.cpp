@@ -11,12 +11,21 @@ Game::~Game() {
 
 }
 
+void Game::setFactory(int charType) {
+    if (charType == 0) {
+        this->factory = new WarriorFactory(); 
+    }
+    else if (charType == 1) {
+        this->factory = new MageFactory();
+    }
+}
+
 void Game::displayOptions() {
 
 }
 
 void Game::createPlayer() {
-
+    this->player = factory->createCharacter(); 
 }
 
 void Game::spawnEnemy() {
@@ -28,7 +37,7 @@ void Game::spawnLoot() {
 }
 
 void Game::startCombat() {
-    
+
 }
 
 
