@@ -12,10 +12,10 @@ Game::~Game() {
 }
 
 void Game::setFactory(int charType) {
-    if (charType == 0) {
+    if (charType == 1) {
         this->factory = new WarriorFactory(); 
     }
-    else if (charType == 1) {
+    else if (charType == 2) {
         this->factory = new MageFactory();
     }
 }
