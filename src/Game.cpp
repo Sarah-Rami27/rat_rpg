@@ -48,7 +48,7 @@ void Game::startCombat() {
 
         player->attack(enemy);                              //player attacks first
 
-        if(enemy->getHp() > 0){                             //check hp b4 attack
+        if(enemy->getHp() > 0){                             
             enemy->attack(player);                          //enemy attacks player
         }
 
