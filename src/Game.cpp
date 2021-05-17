@@ -9,6 +9,7 @@ using namespace std;
 Game::Game() {
     factory = nullptr;
     player = nullptr;
+    enemy = nullptr;
     levelNum = 0; 
 }
 
@@ -37,8 +38,8 @@ void Game::createPlayer() {
     this->player = this->factory->createCharacter(); 
 }
 
-void Game::spawnEnemy() {
-
+void Game::spawnEnemy() {	
+   this->enemy = new Enemy(levelNum);
 }
 
 void Game::spawnLoot() {

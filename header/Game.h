@@ -4,13 +4,14 @@
 #include "CharacterFactory.hpp"
 #include "WarriorFactory.h"
 #include "MageFactory.h"
+#include "Enemy.hpp"
 
 class Game {
     private: 
         CharacterFactory* factory; 
         Character* player; 
         int levelNum; 
-        //Enemy* enemy; 
+        Enemy* enemy; 
 
     public:
         Game(); 
