@@ -32,7 +32,6 @@ void Game::displayOptions() {
     cout << "2) Defend!" << endl;
 }
 
-}
 
 void Game::createPlayer() {
     this->player = this->factory->createCharacter(); 
