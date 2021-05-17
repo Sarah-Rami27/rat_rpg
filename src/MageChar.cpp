@@ -2,6 +2,7 @@
 #define __MAGE_CHAR_CPP__
 
 #include "../header/MageChar.h"
+#include "../header/Enemy.hpp"
 
 MageChar::MageChar() {
     this->name = "Emile The Rat";
