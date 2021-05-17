@@ -8,7 +8,7 @@ class WarriorChar: public Character {
         WarriorChar();
         WarriorChar(string, double, double, double);
         ~WarriorChar(); 
-        void attack(); 
+        void attack(Enemy*); 
         void defend(); 
         void reduceHealth(); 
 
