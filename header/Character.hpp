@@ -15,7 +15,9 @@ class Character {
     public:
         virtual void attack(Enemy*) = 0; 
         virtual void defend() = 0; 
-        virtual void reduceHealth() = 0; 
+
+        virtual void reduceHealth(double damage) = 0; 
+
         string getName() const {
             return this->name;
         }
@@ -28,6 +30,7 @@ class Character {
         double getHp() const {
             return this->hp;
         }
+
 };
 
 #endif 
