@@ -22,7 +22,7 @@ MageChar::MageChar() {
 
 }
 
-void MageChar::attack() {
+void MageChar::attack(Enemy*) {
 
 }
 

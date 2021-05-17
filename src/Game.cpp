@@ -27,6 +27,10 @@ void Game::setFactory(int charType) {
 }
 
 void Game::displayOptions() {
+    cout << "Pick your next move (choose a number)" << endl;
+    cout << "1) Attack the enemy!" << endl;
+    cout << "2) Defend!" << endl;
+}
 
 }
 
@@ -46,22 +50,33 @@ void Game::startCombat() {
     spawnEnemy();
 
     while(player->getHp() > 0 && enemy->getHp() > 0){
+        int userInput;
+        displayOptions();                                   //1) attack 2)defend
+        cin >> userInput;
 
-        player->attack(enemy);                              //player attacks first
+        if(userInput == 1){
+            player->attack(enemy);                              //player attacks first
 
-        if(enemy->getHp() > 0){                             
-            enemy->attack(player);                          //enemy attacks player
+            if(enemy->getHp() > 0){                             
+                enemy->attack(player);                          //enemy attacks player
+            }
+
+            if(player->getHp() > 0 && enemy->getHp() <= 0){     //player wins
+                //cout << "You have won the battle!" << endl;
+                spawnLoot();
+                return;
+            }
+
+            if(player->getHp() <= 0 && enemy->getHp() > 0){     //enemy wins
+                //cout << "ggwp" << endl;
+                return;
+            } 
         }
 
-        if(player->getHp() > 0 && enemy->getHp() <= 0){     //player wins
-            //cout << "You have won the battle!" << endl;
-            return;
+        if(userInput == 2){
+            player->defend();
         }
-
-        if(player->getHp() <= 0 && enemy->getHp() > 0){     //enemy wins
-            //cout << "ggwp" << endl;
-            return;
-        }
+        
     }
 }
 
