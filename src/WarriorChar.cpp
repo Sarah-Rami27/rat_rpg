@@ -22,7 +22,7 @@ WarriorChar::WarriorChar() {
 
 }
 
-void WarriorChar::attack() {
+void WarriorChar::attack(Enemy*) {
 
 }
 
