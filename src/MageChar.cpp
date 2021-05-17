@@ -22,7 +22,7 @@ MageChar::MageChar() {
 
 }
 
-void MageChar::attack() {
+void MageChar::attack(Enemy*) {
 
 }
 
@@ -30,8 +30,8 @@ void MageChar::defend() {
 
 }
 
-void MageChar::reduceHealth() {
-    
+void MageChar::reduceHealth(double damage) {
+    this->hp = (this->hp - damage) + this->def;
 }
 
 #endif 

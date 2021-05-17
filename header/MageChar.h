@@ -8,9 +8,9 @@ class MageChar: public Character {
         MageChar();
         MageChar(string, double, double, double);
         ~MageChar(); 
-        void attack(); 
+        void attack(Enemy*); 
         void defend(); 
-        void reduceHealth(); 
+        void reduceHealth(double damage); 
 
 };
 

@@ -22,7 +22,7 @@ WarriorChar::WarriorChar() {
 
 }
 
-void WarriorChar::attack() {
+void WarriorChar::attack(Enemy*) {
 
 }
 
@@ -30,8 +30,8 @@ void WarriorChar::defend() {
 
 }
 
-void WarriorChar::reduceHealth() {
-    
+void WarriorChar::reduceHealth(double damage) {
+   this->hp = (this->hp - damage) + this->def; 
 }
 
 #endif 
