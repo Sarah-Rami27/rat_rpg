@@ -8,17 +8,17 @@ using namespace std;
 class Enemy {
 private:
    string name;
-   double health;
+   double hp;
    double atk;
-   double defense;
+   double def;
 public:
    Enemy();
    Enemy(int); //creates enemy scaled to level (int)
-   double getHealth(); //getter (hp)
+   double getHp(); //getter (hp)
    double getAtk(); //getter (atk)
-   double getDefense(); //getter (def)
+   double getDef(); //getter (def)
    void attack(Character*); //will target a character and deal damage
-   void reduceHealth(); //reduces hp
+   void reduceHp(); //reduces hp
 }
 
 #endif //__ENEMY_HPP__
