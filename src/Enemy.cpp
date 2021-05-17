@@ -21,7 +21,7 @@ Enemy::Enemy(int levelNum) {
 }
 
 void Enemy::attack(Character* target) {
-   target.reduceHealth(this->atk);
+   target->reduceHealth(this->atk);
 }
 
 void Enemy::reduceHealth(double damage) {
