@@ -31,7 +31,9 @@ void MageChar::defend() {
 }
 
 void MageChar::reduceHealth(double damage) {
-    this->hp = (this->hp - damage) + this->def;
-}
+    if(this->def < damage){
+        this->hp = this->hp - (damage - this->def);
+    }
+ }
 
 #endif 

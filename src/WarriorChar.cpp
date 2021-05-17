@@ -31,7 +31,9 @@ void WarriorChar::defend() {
 }
 
 void WarriorChar::reduceHealth(double damage) {
-   this->hp = (this->hp - damage) + this->def; 
+    if(this->def < damage){
+        this->hp = this->hp - (damage - this->def);
+    }
 }
 
 #endif 
