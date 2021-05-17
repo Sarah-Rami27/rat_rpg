@@ -20,7 +20,9 @@ Enemy::Enemy(int levelNum) {
    this->defense = (levelNum / 2.0) + 10.0;
 }
 
-void Enemy::attack(Character* target) {} //is this even needed?
+void Enemy::attack(Character* target) {
+   target.reduceHealth(this->atk);
+}
 
 void Enemy::reduceHealth(double damage) {
    if(this->defense < damage) { //if there is not enough defense to negate all damage
