@@ -2,6 +2,7 @@
 #define __MAGE_CHAR_H__
 
 #include "Character.hpp"
+#include "Enemy.h"
 
 class MageChar: public Character {
     public:

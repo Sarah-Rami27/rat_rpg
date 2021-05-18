@@ -10,7 +10,7 @@ class Game {
         CharacterFactory* factory; 
         Character* player; 
         int levelNum; 
-        //Enemy* enemy; 
+        Enemy* enemy; 
 
     public:
         Game(); 

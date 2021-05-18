@@ -2,7 +2,7 @@
 #define __WARRIOR_CHAR_CPP__
 
 #include "../header/WarriorChar.h"
-#include "../header/Enemy.hpp"
+
 
 WarriorChar::WarriorChar() {
     this->name = "Remy The Rat";

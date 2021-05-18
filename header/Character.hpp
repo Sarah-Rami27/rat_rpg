@@ -1,6 +1,8 @@
 #ifndef __CHARACTER_HPP__
 #define __CHARACTER_HPP__
 
+#include "Enemy.h"
+
 #include <string>  
 
 using namespace std; 
