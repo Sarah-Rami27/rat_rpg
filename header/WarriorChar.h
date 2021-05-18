@@ -2,6 +2,7 @@
 #define __WARRIOR_CHAR_H__
 
 #include "Character.hpp"
+#include "Enemy.h"
 
 class WarriorChar: public Character {
     public:
