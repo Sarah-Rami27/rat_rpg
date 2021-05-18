@@ -2,6 +2,7 @@
 #define __ENEMY_H__
 
 #include <string>
+#include "Character.hpp"
 
 using namespace std;
 

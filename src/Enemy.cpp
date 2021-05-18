@@ -34,7 +34,7 @@ void Enemy::attack(Character* target) {
 
 void Enemy::reduceHealth(double damage) {
    if(this->def < damage) { //if there is not enough defense to negate all damage
-   	this->hp = this->hp - (this->damage - this->def);
+   	this->hp = this->hp - (damage - this->def);
    }
 }
 
