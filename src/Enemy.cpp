@@ -1,7 +1,7 @@
 #ifndef __ENEMY_CPP__
 #define __ENEMY_CPP__
 
-#include "../header/Enemy.hpp"
+#include "../header/Enemy.h"
 
 Enemy::Enemy() {
    this->name = "Generic";
