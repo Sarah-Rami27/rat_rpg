@@ -31,7 +31,7 @@ class Character {
         double getDef() const {
             return this->def;
         }
-	double getcurHp() const {
+	double getCurHp() const {
 	    return this->curHp
 	}
         double getMaxHp() const {
