@@ -48,7 +48,7 @@ void Game::spawnLoot() {
 void Game::startCombat() {
     spawnEnemy();
 
-    while(player->getHp() > 0 && enemy->getHp() > 0){
+    while(player->getCurHp() > 0 && enemy->getHp() > 0){
         int userInput;
         displayOptions();                                   //1) attack 2)defend
         cin >> userInput;
@@ -60,13 +60,13 @@ void Game::startCombat() {
                 enemy->attack(player);                          //enemy attacks player
             }
 
-            if(player->getHp() > 0 && enemy->getHp() <= 0){     //player wins
+            if(player->getCurHp() > 0 && enemy->getHp() <= 0){     //player wins
                 //cout << "You have won the battle!" << endl;
                 spawnLoot();
                 return;
             }
 
-            if(player->getHp() <= 0 && enemy->getHp() > 0){     //enemy wins
+            if(player->getCurHp() <= 0 && enemy->getHp() > 0){     //enemy wins
                 //cout << "ggwp" << endl;
                 return;
             } 

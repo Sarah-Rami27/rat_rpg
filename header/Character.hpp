@@ -12,13 +12,15 @@ class Character {
         string name;
         double atk;
         double def;
-        double hp; 
+        double curHp; 
+	double maxHp; 
 
     public:
         virtual void attack(Enemy*) = 0; 
         virtual void defend() = 0; 
 
         virtual void reduceHealth(double damage) = 0; 
+	virtual void increaseHealth(double heal) = 0;
 
         string getName() const {
             return this->name;
@@ -29,8 +31,11 @@ class Character {
         double getDef() const {
             return this->def;
         }
-        double getHp() const {
-            return this->hp;
+	double getCurHp() const {
+	    return this->curHp
+	}
+        double getMaxHp() const {
+            return this->maxHp;
         }
 
 };
