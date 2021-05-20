@@ -8,7 +8,8 @@ class CharacterFactory {
         string name; 
         double atk;
         double def;
-        double hp; 
+        double curHp; 
+	double maxHp;
     public:
         virtual Character* createCharacter() = 0; 
         //virtual Weapon* createWeapon() = 0; 

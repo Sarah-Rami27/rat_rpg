@@ -7,15 +7,16 @@ MageChar::MageChar() {
     this->name = "Emile The Rat";
     this->atk = 0; 
     this->def = 0;
-    this->hp = 0; 
-
+    this->curHp = 0; 
+    this->maxHp = 0;
 }
 
 MageChar::MageChar(string name, double atk, double def, double hp) {
     this->name = name;
     this->atk = atk; 
     this->def = def;
-    this->hp = hp; 
+    this->curHp = hp; 
+    this->maxHp = hp;
 }
 
 MageChar::MageChar() {
@@ -32,8 +33,17 @@ void MageChar::defend() {
 
 void MageChar::reduceHealth(double damage) {
     if(this->def < damage){
-        this->hp = this->hp - (damage - this->def);
+        this->curHp = this->curHp - (damage - this->def);
     }
- }
+}
+
+void MageChar::increaseHealth(double heal) {
+    if((this->curHp + heal) >= this->maxHp) {
+	this->curHp = this->maxHp;
+    }
+    else {
+	this->curHp += heal;
+    }
+}
 
 #endif 
