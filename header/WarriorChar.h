@@ -12,7 +12,7 @@ class WarriorChar: public Character {
         void attack(Enemy*); 
         void defend(); 
         void reduceHealth(double damage); 
-	void increaseHealth(double heal);
+	    void increaseHealth(double heal);
 };
 
 #endif
