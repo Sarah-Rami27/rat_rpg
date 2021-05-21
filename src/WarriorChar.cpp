@@ -10,6 +10,8 @@ WarriorChar::WarriorChar() {
     this->def = 0;
     this->curHp = 0; 
     this->maxHp = 0;
+    this->currWeapon = nullptr;
+    this->currArmor = nullptr;
 }
 
 WarriorChar::WarriorChar(string name, double atk, double def, double hp) {
