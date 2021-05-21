@@ -2,6 +2,7 @@
 #define __LOOT_H__
 
 #include <string>
+#include <iostream>
 #include <stdlib.h>
 #include <time.h>
 #include "Character.hpp"
