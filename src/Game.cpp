@@ -10,11 +10,13 @@ Game::Game() {
     factory = nullptr;
     player = nullptr;
     levelNum = 0; 
+    enemy = nullptr;
 }
 
 Game::~Game() {
     delete factory; 
     delete player; 
+    delete enemy;
 }
 
 void Game::setFactory(int charType) {
@@ -38,7 +40,7 @@ void Game::createPlayer() {
 }
 
 void Game::spawnEnemy() {
-
+    this->enemy = new Enemy(this->levelNum);
 }
 
 void Game::spawnLoot() {
@@ -63,6 +65,7 @@ void Game::startCombat() {
             if(player->getCurHp() > 0 && enemy->getHp() <= 0){     //player wins
                 //cout << "You have won the battle!" << endl;
                 spawnLoot();
+                delete enemy;
                 return;
             }
 
