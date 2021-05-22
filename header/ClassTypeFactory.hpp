@@ -1,11 +1,18 @@
-#ifndef __CHARACTER_FACTORY_H__
-#define __CHARACTER_FACTORY_H__
+#ifndef __CLASS_TYPE_FACTORY_H__
+#define __CLASS_TYPE_FACTORY_H__
 
 #include "Character.hpp" 
 #include "Weapon.hpp"
 #include "Armor.hpp"
 
-class CharacterFactory {
+class ClassTypeFactory {
+    protected:
+        string name; 
+        double atk;
+        double def;
+        double curHp; 
+	    double maxHp;
+
     public:
         virtual Character* createCharacter() = 0; 
         //virtual Weapon* createWeapon() = 0; 
