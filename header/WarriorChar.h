@@ -11,8 +11,8 @@ class WarriorChar: public Character {
         ~WarriorChar(); 
         void attack(Enemy*); 
         void defend(); 
-        void reduceHealth(double damage); 
-	void increaseHealth(double heal);
+        void reduceHealth(double damage);
+        void increaseHealth(double heal);
 };
 
 #endif

@@ -2,6 +2,8 @@
 #define __CLASS_TYPE_FACTORY_H__
 
 #include "Character.hpp" 
+#include "Weapon.hpp"
+#include "Armor.hpp"
 
 class ClassTypeFactory {
     protected:
@@ -9,7 +11,8 @@ class ClassTypeFactory {
         double atk;
         double def;
         double curHp; 
-	double maxHp;
+	    double maxHp;
+
     public:
         virtual Character* createCharacter() = 0; 
         //virtual Weapon* createWeapon() = 0; 
