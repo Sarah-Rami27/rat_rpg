@@ -1,13 +1,13 @@
 #ifndef __GAME_H__
 #define __GAME_H__
 
-#include "CharacterFactory.hpp"
+#include "ClassTypeFactory.hpp"
 #include "WarriorFactory.h"
 #include "MageFactory.h"
 
 class Game {
     private: 
-        CharacterFactory* factory; 
+        ClassTypeFactory* factory; 
         Character* player; 
         int levelNum; 
         Enemy* enemy; 

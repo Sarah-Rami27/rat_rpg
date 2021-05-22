@@ -1,9 +1,9 @@
-#ifndef __CHARACTER_FACTORY_H__
-#define __CHARACTER_FACTORY_H__
+#ifndef __CLASS_TYPE_FACTORY_H__
+#define __CLASS_TYPE_FACTORY_H__
 
 #include "Character.hpp" 
 
-class CharacterFactory {
+class ClassTypeFactory {
     protected:
         string name; 
         double atk;

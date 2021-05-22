@@ -1,9 +1,9 @@
 #ifndef __MAGE_FACTORY_H__
 #define __MAGE_FACTORY_H__
 
-#include "CharacterFactory.hpp"
+#include "ClassTypeFactory.hpp"
 
-class MageFactory: public CharacterFactory {
+class MageFactory: public ClassTypeFactory {
 
     public: 
         MageFactory(); 

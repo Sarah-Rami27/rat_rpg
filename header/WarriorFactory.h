@@ -1,9 +1,9 @@
 #ifndef __WARRIOR_FACTORY_H__
 #define __WARRIOR_FACTORY_H__
 
-#include "CharacterFactory.hpp"
+#include "ClassTypeFactory.hpp"
 
-class WarriorFactory: public CharacterFactory {
+class WarriorFactory: public ClassTypeFactory {
 
     public: 
         WarriorFactory(); 
