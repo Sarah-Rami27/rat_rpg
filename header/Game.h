@@ -4,6 +4,7 @@
 #include "ClassTypeFactory.hpp"
 #include "WarriorFactory.h"
 #include "MageFactory.h"
+#include "Enemy.h"
 
 class Game {
     private: 
