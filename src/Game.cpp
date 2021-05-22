@@ -63,14 +63,12 @@ void Game::startCombat() {
             }
 
             if(player->getCurHp() > 0 && enemy->getHp() <= 0){     //player wins
-                //cout << "You have won the battle!" << endl;
                 spawnLoot();
                 delete enemy;
                 return;
             }
 
             if(player->getCurHp() <= 0 && enemy->getHp() > 0){     //enemy wins
-                //cout << "ggwp" << endl;
                 return;
             } 
         }
