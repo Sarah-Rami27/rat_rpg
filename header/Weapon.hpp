@@ -12,7 +12,7 @@ class Weapon {
         double piercing;
 
     public:
-        virtual double calculateDamage(double) = 0;     //passes in the character's atk
+        virtual double calculateDamage(double, double) = 0;     //passes in the character's atk and Enemy's def
         virtual double calculateLifeDrain() = 0; 
 
 };

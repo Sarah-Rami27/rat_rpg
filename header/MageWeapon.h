@@ -8,7 +8,7 @@ class MageWeapon: public Weapon {
         MageWeapon();
         MageWeapon(double, double, int, double, double ); 
         ~MageWeapon(); 
-        double calculateDamage(double); 
+        double calculateDamage(double, double); 
         double calculateLifeDrain(); 
 
 
