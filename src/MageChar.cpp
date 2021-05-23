@@ -9,8 +9,8 @@ MageChar::MageChar() {
     this->def = 2;
     this->curHp = 16; 
     this->maxHp = 16;
-    this->currWeapon = nullptr;
-    this->currArmor = nullptr;
+    this->currWeapon = new MageWeapon();
+    this->currArmor = new MageArmor();
 }
 
 MageChar::MageChar(string name, double atk, double def, double hp) {

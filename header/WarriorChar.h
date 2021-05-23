@@ -3,6 +3,8 @@
 
 #include "Character.hpp"
 #include "Enemy.h"
+#include "WarriorWeapon.h"
+#include "WarriorArmor.h"
 
 class WarriorChar: public Character {
     public:
