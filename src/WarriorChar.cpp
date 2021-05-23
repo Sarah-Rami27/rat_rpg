@@ -28,8 +28,9 @@ WarriorChar::WarriorChar() {
 }
 */
 
-void WarriorChar::attack(Enemy*) {
-
+void WarriorChar::attack(Enemy* enemy) {
+    double damage = this->currWeapon->calculateDamage(this->atk, enemy->getDef());
+    enemy->reduceHealth(damage);
 }
 
 void WarriorChar::defend() {
