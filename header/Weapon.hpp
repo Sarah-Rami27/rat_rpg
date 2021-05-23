@@ -13,7 +13,6 @@ class Weapon {
 
     public:
         virtual double calculateDamage() = 0;
-        virtual double calculateLifeDrain() = 0; 
 
 };
 
