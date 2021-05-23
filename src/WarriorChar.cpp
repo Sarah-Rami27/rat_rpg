@@ -6,10 +6,10 @@
 
 WarriorChar::WarriorChar() {
     this->name = "Remy The Rat";
-    this->atk = 0; 
-    this->def = 0;
-    this->curHp = 0; 
-    this->maxHp = 0;
+    this->atk = 4; 
+    this->def = 10;
+    this->curHp = 20; 
+    this->maxHp = 20;
     this->currWeapon = nullptr;
     this->currArmor = nullptr;
 }
@@ -22,11 +22,12 @@ WarriorChar::WarriorChar(string name, double atk, double def, double hp) {
     this->maxHp = hp;
 }
 
-/*
-WarriorChar::WarriorChar() {
 
+WarriorChar::~WarriorChar() {
+    delete currWeapon; 
+    delete currArmor; 
 }
-*/
+
 
 void WarriorChar::attack(Enemy* enemy) {
     double damage = this->currWeapon->calculateDamage(this->atk, enemy->getDef());
