@@ -20,11 +20,11 @@ MageChar::MageChar(string name, double atk, double def, double hp) {
     this->curHp = hp; 
     this->maxHp = hp;
 }
-
+/*
 MageChar::MageChar() {
 
 }
-
+*/
 void MageChar::attack(Enemy*) {
 
 }
