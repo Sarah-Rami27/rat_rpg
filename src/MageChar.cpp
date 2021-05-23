@@ -5,12 +5,12 @@
 
 MageChar::MageChar() {
     this->name = "Emile The Rat";
-    this->atk = 0; 
-    this->def = 0;
-    this->curHp = 0; 
-    this->maxHp = 0;
-    this->currWeapon = nullptr;
-    this->currArmor = nullptr;
+    this->atk = 8; 
+    this->def = 2;
+    this->curHp = 16; 
+    this->maxHp = 16;
+    this->currWeapon = new MageWeapon();
+    this->currArmor = new MageArmor();
 }
 
 MageChar::MageChar(string name, double atk, double def, double hp) {
@@ -20,11 +20,12 @@ MageChar::MageChar(string name, double atk, double def, double hp) {
     this->curHp = hp; 
     this->maxHp = hp;
 }
-/*
-MageChar::MageChar() {
 
+MageChar::~MageChar() {
+    delete this->currWeapon;
+    delete this->currArmor;
 }
-*/
+
 void MageChar::attack(Enemy* enemy) {
     double damage = this->currWeapon->calculateDamage(this->atk, enemy->getDef());
     enemy->reduceHealth(damage);

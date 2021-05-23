@@ -3,6 +3,8 @@
 
 #include "Character.hpp"
 #include "Enemy.h"
+#include "MageWeapon.h"
+#include "MageArmor.h"
 
 class MageChar: public Character {
     public:
