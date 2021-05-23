@@ -5,6 +5,8 @@
 
 using namespace std;
 
+void displayCharacterOptions(); 
+
 int main() {
 
     int userInput; 
