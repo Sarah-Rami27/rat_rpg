@@ -11,16 +11,12 @@
 using namespace std;
 
 class Loot {
-private:
-   bool drop;
-   double goodRolls;
-   double allRolls;
 public:
    void rollForLoot(int);
    bool roll(int, int);
    Weapon* spawnWeapon(int, CharacterFactory*);
    Armor* spawnArmor(int, CharacterFactory*);
-   void spawnFood();
+   double spawnFood();
 };
 
 #endif //__LOOT_H__

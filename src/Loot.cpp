@@ -22,31 +22,29 @@ bool Loot::roll(int good, int all) { //good = success, all = total rolls
 Weapon* Loot::spawnWeapon(int levelNum, CharacterFactory*) {}
 Armor* Loot::spawnArmor(int levelNum, CharacterFactory*) {}
 
-void Loot::spawnFood() {
+double Loot::spawnFood() {
     if(roll(1,100)) {
 	cout << "You found" <<  "\e[1;33m RATATOUILLE\e[0m" << "!!!" << endl;
-	player->increaseHealth(player->getMaxHp());
-	return;
+	return 1.00;
     }	
 
     if(roll(1,5)) {
 	cout << "You found" <<  "\e[1;35m STRAWBERRIES AND CHEESE\e[0m" << "!!" << endl; 
-	player->increaseHealth(player->getMaxHp() * 0.4);
-	return;
+	return 0.30;
     } 
 
     if(roll(2,5)) {
 	cout << "You found" <<  "\e[1;34m LIGHTNING MUSHROOMS\e[0m" << "!" << endl; 
-	player->increaseHealth(player->getMaxHp() * 0.2);	
-	return;
+	return 0.20;
     }
 
     if(roll(2,3)) {
 	cout << "You found (edible)" <<  "\e[1;37m TRASH\e[0m" << "..." << endl; 
-	player->increaseHealth(player->getMaxHp() * 0.05);	
-	return;
+	return 0.05;
     }
+
     cout << "You went hungry this time..." << endl;
+    return 0.00;
 }
 
 #endif //__LOOT_CPP__
