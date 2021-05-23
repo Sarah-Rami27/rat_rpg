@@ -78,7 +78,7 @@ void Game::startCombat() {
             } 
         }
 
-        else if(userInput == 2){
+        if(userInput == 2){
             player->defend();
         }
     }
