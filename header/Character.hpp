@@ -1,6 +1,7 @@
 #ifndef __CHARACTER_HPP__
 #define __CHARACTER_HPP__
 
+class Enemy;        // forward declaration to resolve circular dependency  
 #include "Enemy.h"
 #include "Armor.hpp"
 #include "Weapon.hpp"

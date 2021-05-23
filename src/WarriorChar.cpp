@@ -22,9 +22,11 @@ WarriorChar::WarriorChar(string name, double atk, double def, double hp) {
     this->maxHp = hp;
 }
 
+/*
 WarriorChar::WarriorChar() {
 
 }
+*/
 
 void WarriorChar::attack(Enemy* enemy) {
     double damage = this->currWeapon->calculateDamage(this->atk, enemy->getDef());

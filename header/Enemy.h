@@ -2,6 +2,8 @@
 #define __ENEMY_H__
 
 #include <string>
+
+class Character;       // forward declaration to resolve circular dependency 
 #include "Character.hpp"
 
 using namespace std;
