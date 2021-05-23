@@ -55,6 +55,11 @@ void Game::startCombat() {
         displayOptions();                                   //1) attack 2)defend
         cin >> userInput;
 
+        while(userInput != 1 && userInput != 2){
+            //cout << "Please enter a valid choice" << endl;
+            cin >> userInput;
+        }
+
         if(userInput == 1){
             player->attack(enemy);                              //player attacks first
 
@@ -76,7 +81,6 @@ void Game::startCombat() {
         if(userInput == 2){
             player->defend();
         }
-        
     }
 }
 
