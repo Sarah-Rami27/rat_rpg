@@ -25,8 +25,9 @@ MageChar::MageChar() {
 
 }
 
-void MageChar::attack(Enemy*) {
-
+void MageChar::attack(Enemy* enemy) {
+    double damage = this->currWeapon->calculateDamage(this->atk, enemy->getDef());
+    enemy->reduceHealth(damage);
 }
 
 void MageChar::defend() {
