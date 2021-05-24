@@ -21,6 +21,7 @@ int main() {
 
     game.setFactory(userInput);
     game.createPlayer(); 
+    game.startCombat(); 
 
     return 0;
 }
