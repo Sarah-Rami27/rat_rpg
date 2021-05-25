@@ -8,7 +8,9 @@ class MageFactory: public ClassTypeFactory {
     public: 
         MageFactory(); 
         ~MageFactory(); 
-        Character* createCharacter(); 
+        Character* createCharacter();
+        Weapon* createWeapon();
+        Armor* createArmor();  
 };
 
 #endif 
