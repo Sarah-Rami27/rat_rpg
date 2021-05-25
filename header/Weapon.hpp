@@ -13,7 +13,9 @@ class Weapon {
 
     public:
         virtual double calculateDamage(double, double) = 0;     //passes in the character's atk and Enemy's def
-        virtual double calculateLifeDrain(); 
+        virtual double calculateLifeDrain() {
+            return 0.0; 
+        }
 
 };
 
