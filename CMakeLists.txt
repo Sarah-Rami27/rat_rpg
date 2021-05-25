@@ -40,6 +40,7 @@ ADD_EXECUTABLE(game
 )   
 
 TARGET_LINK_LIBRARIES(game game_lib)
+TARGET_LINK_LIBRARIES(test game_lib)
 
 TARGET_LINK_LIBRARIES(test gtest)
 TARGET_COMPILE_DEFINITIONS(test PRIVATE gtest_disable_pthreads=ON)
