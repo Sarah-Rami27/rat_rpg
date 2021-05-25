@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 
-#include "weapon_decorator_test.hpp"
 #include "weapon_test.hpp"
+#include "weapon_decorator_test.hpp"
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
