@@ -22,8 +22,13 @@ ADD_LIBRARY(game_lib STATIC
     src/WarriorWeapon.cpp 
     src/MageWeapon.cpp 
 
+    header/WeaponDecorator.hpp
+    src/DamageIncrease.cpp
+
     src/Game.cpp 
     src/Enemy.cpp 
+
+    
 )
 
 TARGET_INCLUDE_DIRECTORIES(game_lib
