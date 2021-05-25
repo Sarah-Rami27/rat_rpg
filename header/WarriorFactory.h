@@ -2,6 +2,9 @@
 #define __WARRIOR_FACTORY_H__
 
 #include "ClassTypeFactory.hpp"
+#include "WarriorChar.h"
+#include "WarriorWeapon.h"
+#include "WarriorArmor.h"
 
 class WarriorFactory: public ClassTypeFactory {
 
@@ -9,6 +12,8 @@ class WarriorFactory: public ClassTypeFactory {
         WarriorFactory(); 
         ~WarriorFactory(); 
         Character* createCharacter(); 
+        Weapon* createWeapon();
+        Armor* createArmor(); 
 };
 
 #endif 
