@@ -17,7 +17,8 @@ class Game {
         Game(); 
         ~Game();
         void setFactory(int charType); 
-        void displayOptions(); 
+        void displayOptions();
+        bool isAlive(); 
         void createPlayer(); 
         void spawnEnemy(); 
         void spawnLoot();
