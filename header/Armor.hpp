@@ -1,7 +1,10 @@
 #ifndef __ARMOR_HPP__
 #define __ARMOR_HPP__
 
+#include <iostream>
+
 using namespace std; 
+
 
 class Armor {
     protected:
@@ -9,6 +12,9 @@ class Armor {
 
     public:
         virtual double getDef() = 0; 
+        virtual void printStats(std::ostream& out) {
+            out << "Def: " << def << endl; 
+        }
 
 };
 
