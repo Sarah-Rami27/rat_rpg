@@ -10,8 +10,6 @@ using namespace std;
 
 class Loot {
 public:
-//   void rollForLoot(int);
-//   bool roll(int, int);
    Weapon* spawnWeapon(int, ClassTypeFactory*);
    Armor* spawnArmor(int, ClassTypeFactory*);
    double spawnFood();
