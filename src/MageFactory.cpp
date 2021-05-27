@@ -17,10 +17,11 @@ Character* MageFactory::createCharacter() {
 }
 
 Weapon* MageFactory::createWeapon() {
-    return new WarriorWeapon(); 
+    return new MageWeapon(); 
 }
 
 Armor* MageFactory::createArmor() {
-    return new WarriorArmor();
+    return new MageArmor();
+}
 
 #endif
