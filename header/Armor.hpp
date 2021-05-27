@@ -9,6 +9,9 @@ class Armor {
 
     public:
         virtual double getDef() = 0; 
+        virtual void printStats(std::ostream& out) {
+            out << "Def: " << def << endl; 
+        }
 
 };
 
