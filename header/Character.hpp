@@ -7,6 +7,7 @@ class Enemy;        // forward declaration to resolve circular dependency
 #include "Weapon.hpp"
 
 #include <string>  
+#include <iostream>
 
 using namespace std; 
 
@@ -27,6 +28,11 @@ class Character {
         virtual void reduceHealth(double damage) = 0;
         virtual void increaseHealth(double heal) = 0;
 
+        virtual void printStats(std::ostream& out) {
+            out << "Name: " + name + "\nAtk: " << atk << + "\nDef: " 
+            << def << "\nHp: "  << curHp <<  "/" << maxHp << endl;
+        } 
+
         string getName() const {
             return this->name;
         }
@@ -42,7 +48,6 @@ class Character {
         double getMaxHp() const {
             return this->maxHp;
         }
-
 };
 
 #endif 
