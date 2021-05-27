@@ -19,6 +19,13 @@ Game::~Game() {
     delete enemy;
 }
 
+bool Game::isAlive(){
+    if(player->getCurHp() <= 0){
+        return false;
+    }
+    return true;
+}
+
 void Game::setFactory(int charType) {
     if (charType == 1) {
         this->factory = new WarriorFactory(); 
