@@ -3,6 +3,8 @@
 
 #include "Character.hpp"
 #include "Enemy.h"
+#include "MageWeapon.h"
+#include "MageArmor.h"
 
 class MageChar: public Character {
     public:
@@ -12,7 +14,7 @@ class MageChar: public Character {
         void attack(Enemy*); 
         void defend(); 
         void reduceHealth(double damage); 
-	void increaseHealth(double heal);
+        void increaseHealth(double heal);
 };
 
 #endif

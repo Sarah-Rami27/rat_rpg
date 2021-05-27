@@ -5,14 +5,23 @@
 
 using namespace std;
 
+void displayCharacterOptions(); 
+
 int main() {
 
     int userInput; 
     Game game;
     displayCharacterOptions(); 
-    cin >> userInput; 
+    cin >> userInput;
+
+    while(userInput != 1 && userInput != 2){
+        //cout << "Please enter a valid choice" << endl;
+        cin >> userInput;
+    } 
+
     game.setFactory(userInput);
     game.createPlayer(); 
+    game.startCombat(); 
 
     return 0;
 }

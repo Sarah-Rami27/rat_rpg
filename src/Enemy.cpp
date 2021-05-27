@@ -2,6 +2,7 @@
 #define __ENEMY_CPP__
 
 #include "../header/Enemy.h"
+#include <iostream>
 
 Enemy::Enemy() {
    this->name = "Generic";
@@ -33,8 +34,19 @@ void Enemy::attack(Character* target) {
 }
 
 void Enemy::reduceHealth(double damage) {
-   if(this->def < damage) { //if there is not enough defense to negate all damage
-   	this->hp = this->hp - (damage - this->def);
+   double damageTaken = damage - this->def; 
+   if (damageTaken <= 0) {
+      cout << "Their defense is too high, " + this->name + " took no damage!" << endl;
+   }
+   else {
+      this->hp -= damageTaken; 
+      if (this->hp <= 0) {
+         cout << this->name + " died!" << endl;
+      }
+      else {
+         cout << this->name + " took " + to_string((int)damage) + " damage!" << endl;
+         cout << this->name + " has " + to_string((int)this->hp) + " health remaining." << endl;
+      }
    }
 }
 

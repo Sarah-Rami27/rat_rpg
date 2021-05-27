@@ -23,11 +23,11 @@ WarriorWeapon::~WarriorWeapon() {
 
 }
 
-double calculateDamage() {
-
+double WarriorWeapon::calculateDamage(double playerAtk, double enemyDef ) {
+    return this->maxDamage; 
 }
 
-double calculateLifeDrain() {
+double WarriorWeapon::calculateLifeDrain() {
     return 0.0; 
 }
 

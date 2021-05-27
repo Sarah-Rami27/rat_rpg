@@ -23,11 +23,11 @@ MageWeapon::~MageWeapon() {
 
 }
 
-double calculateDamage() {
-
+double MageWeapon::calculateDamage(double playerAtk, double enemyDef) {
+    return this->maxDamage; 
 }
 
-double calculateLifeDrain() {
+double MageWeapon::calculateLifeDrain() {
     return 0.0; 
 }
 

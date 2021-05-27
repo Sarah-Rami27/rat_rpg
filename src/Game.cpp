@@ -10,11 +10,13 @@ Game::Game() {
     factory = nullptr;
     player = nullptr;
     levelNum = 0; 
+    enemy = nullptr;
 }
 
 Game::~Game() {
     delete factory; 
     delete player; 
+    delete enemy;
 }
 
 void Game::setFactory(int charType) {
@@ -38,7 +40,7 @@ void Game::createPlayer() {
 }
 
 void Game::spawnEnemy() {
-
+    this->enemy = new Enemy(this->levelNum);
 }
 
 void Game::spawnLoot() {
@@ -53,6 +55,11 @@ void Game::startCombat() {
         displayOptions();                                   //1) attack 2)defend
         cin >> userInput;
 
+        while(userInput != 1 && userInput != 2){
+            //cout << "Please enter a valid choice" << endl;
+            cin >> userInput;
+        }
+
         if(userInput == 1){
             player->attack(enemy);                              //player attacks first
 
@@ -61,13 +68,12 @@ void Game::startCombat() {
             }
 
             if(player->getCurHp() > 0 && enemy->getHp() <= 0){     //player wins
-                //cout << "You have won the battle!" << endl;
                 spawnLoot();
+                delete this->enemy;
                 return;
             }
 
             if(player->getCurHp() <= 0 && enemy->getHp() > 0){     //enemy wins
-                //cout << "ggwp" << endl;
                 return;
             } 
         }
@@ -75,7 +81,6 @@ void Game::startCombat() {
         if(userInput == 2){
             player->defend();
         }
-        
     }
 }
 
