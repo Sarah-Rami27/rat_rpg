@@ -11,7 +11,6 @@ class ClassTypeFactory {
         virtual Character* createCharacter() = 0; 
         virtual Weapon* createWeapon() = 0; 
         virtual Armor* createArmor() = 0; 
-
 };
 
 #endif
