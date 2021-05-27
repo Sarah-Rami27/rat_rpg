@@ -20,8 +20,10 @@ int main() {
     } 
 
     game.setFactory(userInput);
-    game.createPlayer(); 
-    game.startCombat(); 
+    game.createPlayer();
+    while(game.isAlive()){
+        game.startCombat(); 
+    }
 
     return 0;
 }
