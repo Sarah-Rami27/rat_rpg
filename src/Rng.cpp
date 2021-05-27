@@ -10,7 +10,7 @@ bool RNG::roll(int good, int all) { //good = success, all = total rolls
     
     if(succRate == 0.00) { return false; }
     else if(succRate == 1.00) { return true; }
-    else { return rand()/RAND_MAX <= succRate; }
+    else { return (double)rand()/RAND_MAX <= succRate; }
 }
 
 #endif //__RNG_CPP__
