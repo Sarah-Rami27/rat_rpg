@@ -7,6 +7,7 @@ class Enemy;        // forward declaration to resolve circular dependency
 #include "Weapon.hpp"
 
 #include <string>  
+#include <iostream>
 
 using namespace std; 
 
