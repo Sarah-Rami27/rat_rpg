@@ -1,7 +1,10 @@
 #ifndef __ARMOR_HPP__
 #define __ARMOR_HPP__
 
+#include <iostream>
+
 using namespace std; 
+
 
 class Armor {
     protected:

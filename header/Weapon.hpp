@@ -1,6 +1,8 @@
 #ifndef __WEAPON_HPP__
 #define __WEAPON_HPP__
 
+#include <iostream>
+
 using namespace std;
 
 class Weapon {
