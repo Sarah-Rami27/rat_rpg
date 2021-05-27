@@ -77,6 +77,7 @@ void Game::startCombat() {
             if(player->getCurHp() > 0 && enemy->getHp() <= 0){     //player wins
                 spawnLoot();
                 delete this->enemy;
+                ++levelNum;
                 return;
             }
 
