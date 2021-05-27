@@ -23,7 +23,6 @@ int main() {
     game.createPlayer();
     while(game.isAlive()){
         game.startCombat(); 
-        cout << "You have encountered another enemy!" << endl;
     }
 
     return 0;
