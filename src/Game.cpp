@@ -19,6 +19,13 @@ Game::~Game() {
     delete enemy;
 }
 
+bool Game::isAlive(){
+    if(player->getCurHp() <= 0){
+        return false;
+    }
+    return true;
+}
+
 void Game::setFactory(int charType) {
     if (charType == 1) {
         this->factory = new WarriorFactory(); 
@@ -40,6 +47,7 @@ void Game::createPlayer() {
 }
 
 void Game::spawnEnemy() {
+    cout << "You have encountered an enemy!" << endl;
     this->enemy = new Enemy(this->levelNum);
 }
 
@@ -70,6 +78,7 @@ void Game::startCombat() {
             if(player->getCurHp() > 0 && enemy->getHp() <= 0){     //player wins
                 spawnLoot();
                 delete this->enemy;
+                ++levelNum;
                 return;
             }
 

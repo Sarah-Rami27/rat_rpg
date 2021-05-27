@@ -15,10 +15,10 @@ Enemy::Enemy(int levelNum) {
  /* Enemy will be generated based on levelNum 
  *  Current equation: (#/2.0) + 10.0
  */
-   this->name = "Big Bad Number: " + to_string(levelNum);
+   this->name = "Joe Mama " + to_string(levelNum);
    this->hp = (levelNum / 2.0) + 10.0;
-   this->atk = (levelNum / 2.0) + 10.0;
-   this->def = (levelNum / 2.0) + 10.0;
+   this->atk = (levelNum / 2.0) + 2.0;
+   this->def = (levelNum / 2.0);
 }
 
 string Enemy::getName() const { return this->name; }
@@ -44,8 +44,8 @@ void Enemy::reduceHealth(double damage) {
          cout << this->name + " died!" << endl;
       }
       else {
-         cout << this->name + " took " + to_string((int)damage) + " damage!" << endl;
-         cout << this->name + " has " + to_string((int)this->hp) + " health remaining." << endl;
+         cout << this->name + " took " << damage << " damage!" << endl;
+         cout << this->name + " has " << this->hp << " health remaining." << endl;
       }
    }
 }
