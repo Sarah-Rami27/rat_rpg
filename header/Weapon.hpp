@@ -16,6 +16,10 @@ class Weapon {
         virtual double calculateLifeDrain() {
             return 0.0; 
         }
+        virtual void printStats(std::ostream& out) {
+            out << "Damage Range: " << minDamage << " - " << maxDamage << "\nNumber of hits: "
+            << numHits << "\nCrit Chance: " << critChance << "\nPiercing: " << piercing << endl; 
+        }
 
 };
 
