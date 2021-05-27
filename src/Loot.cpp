@@ -14,19 +14,19 @@
 //	}
 //}
 
-bool Loot::roll(int good, int all) { //good = success, all = total rolls
-	srand (time(NULL)); //init random seed
-
-	double succRate = static_cast<double>(good) / all; //succRate = success percentage
-	
-	return rand()/(RAND_MAX+1.0) < succRate;
-	/*
- 	* rand()/RAND_MAX will return a number between 0 and 1
- 	* < is used over <= in case rand() picks 0, and the succRate is 0
- 	* 1.0 is added to Rand_Max to make sure that rand()/Rand_MAX returning
- 	* 1.0 does not make the succRate of 1.0 fail...
- 	*/
-}
+//bool Loot::roll(int good, int all) { //good = success, all = total rolls
+//	srand (time(NULL)); //init random seed
+//
+//	double succRate = static_cast<double>(good) / all; //succRate = success percentage
+//	
+//	return rand()/(RAND_MAX+1.0) < succRate;
+//	/*
+// 	* rand()/RAND_MAX will return a number between 0 and 1
+// 	* < is used over <= in case rand() picks 0, and the succRate is 0
+// 	* 1.0 is added to Rand_Max to make sure that rand()/Rand_MAX returning
+// 	* 1.0 does not make the succRate of 1.0 fail...
+// 	*/
+//}
 
 Weapon* Loot::spawnWeapon(int levelNum, ClassTypeFactory* factory) {}
 	double minDamage = (levelNum / 3.00) + 1.00;
