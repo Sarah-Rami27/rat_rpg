@@ -29,8 +29,8 @@ class Character {
         virtual void increaseHealth(double heal) = 0;
 
         virtual void printStats(std::ostream& out) {
-            out << "Name: " + name + "\nAtk: " + to_string(atk) + "\nDef: " 
-            + to_string(def) + "\nHp: " + to_string(curHp) + "/" + to_string(maxHp) << endl;
+            out << "Name: " + name + "\nAtk: " << atk << + "\nDef: " 
+            << def << "\nHp: "  << curHp <<  "/" << maxHp << endl;
         } 
 
         string getName() const {
