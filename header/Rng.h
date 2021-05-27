@@ -2,7 +2,7 @@
 #define __RNG_H__
 
 #include <stdlib.h> //MAX_RAND()
-#include <time> //time used to init srand() seed
+#include <time.h> //time used to init srand() seed
 
 class RNG {
    public:
