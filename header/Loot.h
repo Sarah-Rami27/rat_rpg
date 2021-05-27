@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "Character.hpp"
-#include "CharacterFactory.hpp"
+#include "ClassTypeFactory.hpp"
 
 using namespace std;
 
@@ -14,8 +14,8 @@ class Loot {
 public:
    void rollForLoot(int);
    bool roll(int, int);
-   Weapon* spawnWeapon(int, CharacterFactory*);
-   Armor* spawnArmor(int, CharacterFactory*);
+   Weapon* spawnWeapon(int, ClassTypeFactory*);
+   Armor* spawnArmor(int, ClassTypeFactory*);
    double spawnFood();
 };
 

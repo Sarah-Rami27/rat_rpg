@@ -19,10 +19,18 @@ bool Loot::roll(int good, int all) { //good = success, all = total rolls
  	*/
 }
 
-Weapon* Loot::spawnWeapon(int levelNum, CharacterFactory*) {}
-Armor* Loot::spawnArmor(int levelNum, CharacterFactory*) {}
+Weapon* Loot::spawnWeapon(int levelNum, ClassTypeFactory* factory) {}
+	Weapon* newWeapon = factory->createWeapon();
+	
+	return newWeapon;
+}
 
-double Loot::spawnFood() {
+Armor* Loot::spawnArmor(int levelNum, ClassTypeFactory* factory) {
+	Armor* newArmor = factory->createArmor();
+	return newArmor;
+}
+
+double Loot::spawnFood() { //returns food ratio for game to use in tandem with maxhp
     if(roll(1,100)) {
 	cout << "You found" <<  "\e[1;33m RATATOUILLE\e[0m" << "!!!" << endl;
 	return 1.00;
@@ -43,7 +51,7 @@ double Loot::spawnFood() {
 	return 0.05;
     }
 
-    cout << "You went hungry this time..." << endl;
+    cout << "You found no food... Django won't be happy" << endl;
     return 0.00;
 }
 
