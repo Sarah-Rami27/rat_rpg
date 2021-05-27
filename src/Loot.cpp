@@ -3,7 +3,16 @@
 
 #include "../header/Loot.h"
 
-void Loot::rollForLoot(int levelNum) {}
+//void Loot::rollForLoot(int levelNum) {
+//	if(roll(3,10)) {
+//		cout << "A weapon dropped!" << endl;
+//		spawnWeapon(levelNum);		
+//	}
+//	if(roll(3,10)) {
+//		cout << "Armor dropped!" << endl;
+//		spawnArmor(levelNum);
+//	}
+//}
 
 bool Loot::roll(int good, int all) { //good = success, all = total rolls
 	srand (time(NULL)); //init random seed
@@ -20,14 +29,17 @@ bool Loot::roll(int good, int all) { //good = success, all = total rolls
 }
 
 Weapon* Loot::spawnWeapon(int levelNum, ClassTypeFactory* factory) {}
-	Weapon* newWeapon = factory->createWeapon();
-	
-	return newWeapon;
+	double minDamage = (levelNum / 3.00) + 1.00;
+	double maxDamage = (levelNum / 3.00) + 5.00;
+	int numHits = 1;
+	double critChance = 0.20;
+	double piercing = 0.00;
+	return factory->createWeapon(minDamage, maxDamage, numHits, critChance, piercing);
 }
 
 Armor* Loot::spawnArmor(int levelNum, ClassTypeFactory* factory) {
-	Armor* newArmor = factory->createArmor();
-	return newArmor;
+	double def = levelNum / 5.00;	
+	return factory->createArmor(def);
 }
 
 double Loot::spawnFood() { //returns food ratio for game to use in tandem with maxhp
