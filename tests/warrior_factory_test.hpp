@@ -21,6 +21,7 @@ TEST(WarriorFactoryTest, CreateArmor) {
     ClassTypeFactory* test = new WarriorFactory(); 
     Armor* armor = test->createArmor();
     std::string stats = "Def: 1\n";
+    armor->printStats(ss);
     EXPECT_EQ(ss.str(), stats);
 }
 
