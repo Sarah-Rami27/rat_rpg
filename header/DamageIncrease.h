@@ -5,7 +5,7 @@
 
 class DamageIncrease: public WeaponDecorator {
     public:
-        DamageIncrease(Weapon*); 
+        DamageIncrease(Weapon*, int); 
         ~DamageIncrease(); 
         double calculateDamage(double, double);  
 };
