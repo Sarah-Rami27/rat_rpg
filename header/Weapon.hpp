@@ -9,9 +9,6 @@ class Weapon {
     protected:
         double minDamage; 
         double maxDamage;
-        int numHits;
-        double critChance;
-        double piercing;
 
     public:
         virtual double calculateDamage(double, double) = 0;     //passes in the character's atk and Enemy's def
@@ -19,8 +16,8 @@ class Weapon {
             return 0.0; 
         }
         virtual void printStats(std::ostream& out) {
-            out << "Damage Range: " << minDamage << " - " << maxDamage << "\nNumber of hits: "
-            << numHits << "\nCrit Chance: " << critChance << "\nPiercing: " << piercing << endl; 
+            out << "Damage Range: " << minDamage << " - " << maxDamage << endl;
+            //"\nNumber of hits: " << numHits << "\nCrit Chance: " << critChance << "\nPiercing: " << piercing << endl; 
         }
 
 };
