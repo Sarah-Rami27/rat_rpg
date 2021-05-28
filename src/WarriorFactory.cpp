@@ -14,7 +14,9 @@ Character* WarriorFactory::createCharacter() {
     return new WarriorChar(); 
 }
 
-Weapon* WarriorFactory::createWeapon() {
+Weapon* WarriorFactory::createWeapon(int levelNum) {
+    double minDamage = (levelNum / 3.00) + 1.00;
+	double maxDamage = (levelNum / 3.00) + 5.00;
     return new WarriorWeapon(); 
 }
 

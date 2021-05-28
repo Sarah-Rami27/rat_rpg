@@ -9,7 +9,7 @@ class ClassTypeFactory {
  
     public:
         virtual Character* createCharacter() = 0; 
-        virtual Weapon* createWeapon() = 0; 
+        virtual Weapon* createWeapon(int) = 0; 
         virtual Armor* createArmor() = 0; 
 };
 
