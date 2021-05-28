@@ -35,11 +35,11 @@ void WarriorChar::attack(Enemy* enemy) {
 }
 
 void WarriorChar::defend() {
-    this->def *= 2; 
+    this->def *= 2.0; 
 }
 
 void WarriorChar::reduceDefense() {
-    this->def /= 2; 
+    this->def /= 2.0; 
 }
 
 void WarriorChar::reduceHealth(double damage) {
