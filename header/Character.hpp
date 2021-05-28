@@ -32,6 +32,12 @@ class Character {
             out << "Name: " + name + "\nAtk: " << atk << + "\nDef: " 
             << def << "\nHp: "  << curHp <<  "/" << maxHp << endl;
         } 
+        void setCurrWeapon(Weapon* weapon){
+            this->currWeapon = weapon;
+        }
+        void setCurrArmor(Armor* armor){
+            this->currArmor = armor;
+        }
 
         string getName() const {
             return this->name;
