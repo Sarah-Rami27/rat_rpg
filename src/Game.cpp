@@ -71,24 +71,27 @@ void Game::startCombat() {
         if(userInput == 1){
             player->attack(enemy);                              //player attacks first
 
-            if(enemy->getHp() > 0){                             
-                enemy->attack(player);                          //enemy attacks player
-            }
-
-            if(player->getCurHp() > 0 && enemy->getHp() <= 0){     //player wins
+            if(enemy->getHp() <= 0){                            //player wins
                 spawnLoot();
                 delete this->enemy;
                 ++levelNum;
                 return;
             }
-
-            if(player->getCurHp() <= 0 && enemy->getHp() > 0){     //enemy wins
-                return;
-            } 
         }
 
         if(userInput == 2){
             player->defend();
+        }
+
+        if(enemy->getHp() > 0){                             
+            enemy->attack(player);                          //enemy attacks player
+            if (player->getCurHp() <= 0) {
+                return;                                     //enemy wins
+            }
+        }
+
+        if(userInput == 2) {
+            player->reduceDefense();
         }
     }
 }

@@ -32,7 +32,11 @@ void MageChar::attack(Enemy* enemy) {
 }
 
 void MageChar::defend() {
+    this->def *= 1.5;
+}
 
+void MageChar::reduceDefense() {
+    this->def /= 1.5; 
 }
 
 void MageChar::reduceHealth(double damage) {

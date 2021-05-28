@@ -13,6 +13,7 @@ class MageChar: public Character {
         ~MageChar(); 
         void attack(Enemy*); 
         void defend(); 
+        void reduceDefense(); 
         void reduceHealth(double damage); 
         void increaseHealth(double heal);
 };
