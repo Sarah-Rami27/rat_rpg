@@ -47,7 +47,7 @@ void Game::createPlayer() {
 }
 
 void Game::spawnEnemy() {
-    cout << "You have encountered an enemy!" << endl;
+    cout << "You have encountered an enemy!\n" << endl;
     this->enemy = new Enemy(this->levelNum);
 }
 
