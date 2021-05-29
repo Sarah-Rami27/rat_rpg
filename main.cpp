@@ -1,4 +1,5 @@
 #include <iostream> 
+#include <time.h>
 
 #include "header/Game.h"
 
@@ -9,7 +10,7 @@ void displayCharacterOptions();
 void displayTitle();
 
 int main() {
-
+    srand(time(NULL)); //for Rng class functions
     int userInput; 
     Game game;
     displayTitle();
