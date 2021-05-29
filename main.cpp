@@ -1,4 +1,5 @@
 #include <iostream> 
+#include <time.h>
 
 #include "header/Game.h"
 
@@ -8,7 +9,7 @@ using namespace std;
 void displayCharacterOptions(); 
 
 int main() {
-
+    srand(time(NULL)); //for Rng class functions
     int userInput; 
     Game game;
     displayCharacterOptions(); 
