@@ -36,9 +36,10 @@ void Game::setFactory(int charType) {
 }
 
 void Game::displayOptions() {
-    cout << "Pick your next move (choose a number)" << endl;
+    cout << "Pick your next move! (choose a number)" << endl;
     cout << "1) Attack the enemy!" << endl;
     cout << "2) Defend!" << endl;
+    cout << "Input: ";
 }
 
 
@@ -47,7 +48,7 @@ void Game::createPlayer() {
 }
 
 void Game::spawnEnemy() {
-    cout << "You have encountered an enemy!" << endl;
+    cout << "You have encountered an enemy!\n" << endl;
     this->enemy = new Enemy(this->levelNum);
 }
 
@@ -64,7 +65,7 @@ void Game::startCombat() {
         cin >> userInput;
 
         while(userInput != 1 && userInput != 2){
-            //cout << "Please enter a valid choice" << endl;
+            cout << "Please enter a valid choice" << endl;
             cin >> userInput;
         }
 
