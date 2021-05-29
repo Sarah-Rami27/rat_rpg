@@ -1,4 +1,4 @@
-# RPG GAME
+# RAT., RPG GAME
 
   Authors: [Michael Dong](https://github.com/toothnnail), [Sarah Ramirez](https://github.com/Sarah-Rami27), [Nicholas Tengbumroong](https://github.com/nicholastengbumroong)
 
