@@ -11,14 +11,14 @@
 TEST(DecoratorTest, DmgIncrease) {
     Weapon* warWep = new WarriorWeapon(); 
     Weapon* dmgInc = new DamageIncrease(warWep, 1); 
-    EXPECT_EQ(dmgInc->calculateDamage(0, 0), 3);
+    EXPECT_DOUBLE_EQ(dmgInc->calculateDamage(0, 0), 3.35);
 }
 
 TEST(DecoratorTest, DmgIncreaseTwo) {
     Weapon* warWep = new WarriorWeapon(); 
     Weapon* dmgInc = new DamageIncrease(warWep, 1);
     Weapon* dmgInc2 = new DamageIncrease(dmgInc, 1); 
-    EXPECT_EQ(dmgInc2->calculateDamage(0, 0), 5);
+    EXPECT_DOUBLE_EQ(dmgInc2->calculateDamage(0, 0), 5.19);
 }
 
 
