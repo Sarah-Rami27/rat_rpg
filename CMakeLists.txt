@@ -26,6 +26,7 @@ ADD_LIBRARY(game_lib STATIC
     src/DamageIncrease.cpp
     src/CritChance.cpp
     src/Piercing.cpp
+    src/ExtraHit.cpp
 
     src/Game.cpp 
     src/Enemy.cpp 
