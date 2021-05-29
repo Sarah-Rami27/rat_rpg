@@ -30,5 +30,23 @@ TEST(MageChar, mageDefend){
     mage->defend();
     EXPECT_EQ(mage->getDef(),3 );
 }
+TEST(MageChar, mageReduceDef){
+    Character* mage = new MageChar();
+    mage->reduceDefense();
+    EXPECT_DOUBLE_EQ(mage->getDef(), 1.3333333333333333);
+}
+TEST(MageChar, mageHealth){
+    Character* mage = new MageChar();
+    mage->reduceHealth(5);
+    EXPECT_EQ(mage->getCurHp(),13 );
+}
+
+TEST(MageChar, mageIncHealth){
+    Character* mage = new MageChar();
+    EXPECT_EQ(mage->getCurHp(), 16);
+    mage->reduceHealth(5);
+    mage->increaseHealth(2);
+    EXPECT_EQ(mage->getCurHp(),15 );
+}
 
 #endif
