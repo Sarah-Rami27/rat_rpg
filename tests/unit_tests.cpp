@@ -8,6 +8,7 @@
 #include "character_tests.hpp"
 #include "armor_test.hpp"
 #include "damage_increase_test.hpp"
+#include "crit_chance_test.hpp"
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
