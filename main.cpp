@@ -6,11 +6,13 @@
 using namespace std;
 
 void displayCharacterOptions(); 
+void displayTitle();
 
 int main() {
 
     int userInput; 
     Game game;
+    displayTitle();
     displayCharacterOptions(); 
     cin >> userInput;
 
@@ -30,6 +32,20 @@ int main() {
 
 void displayCharacterOptions() {
     cout << "Pick your character type (choose a number)" << endl;
-    cout << "1) Warrior" << endl;
-    cout << "2) Mage" << endl;
+    cout << "1) Remy The Warrior" << endl;
+    cout << "2) Emille The Mage" << endl;
+}
+
+void displayTitle(){
+    cout << R"(
+
+            )      ______  ___ _____     )      
+           (__     | ___ \/ _ \_   _|   (__     
+           _  )_   | |_/ / /_\ \| |     _  )_   
+          (_)_(_)  |    /|  _  || |    (_)_(_)  
+           (o o)   | |\ \| | | || |_    (o o)   
+          ==\o/==  \_| \_\_| |_/\_(_)  ==\o/==  
+	
+	      )" << endl;
+
 }
