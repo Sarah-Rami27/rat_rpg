@@ -28,7 +28,7 @@ ADD_LIBRARY(game_lib STATIC
 
     src/Game.cpp 
     src/Enemy.cpp 
-
+    src/Rng.cpp
     
 )
 
