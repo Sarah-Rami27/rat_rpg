@@ -32,5 +32,28 @@ TEST(EnemyTest, EnemyGetDef) {
 	delete dummy;
 }
 
+TEST(EnemyTest, EnemyReduceHealthDefgeqDamage) {
+	Enemy* dummy = new Enemy(7);
+	double health = (7 / 2.0) + 10.0; //starting hp for Enemy(7)
+	dummy->reduceHealth(3.0); //dummy should lose no health because 3.5 def > 3.0 damage
+	EXPECT_DOUBLE_EQ(dummy->getHp(), 13.5);
+	delete dummy;
+}
 
+TEST(EnemyTest, EnemyReduceHealthDefleqDamage) {
+	Enemy* dummy = new Enemy(7);
+	double health = (7 / 2.0) + 10.0; //starting hp for Enemy(7)
+	dummy->reduceHealth(4.5); //post-damage mitigation we expect (4.5 - 3.5) damage to be dealt
+	health -= 1.0; //4.5 - 3.5 = 1.0
+	EXPECT_DOUBLE_EQ(dummy->getHp(), 12.5);
+	delete dummy;
+}
+
+TEST(EnemyTest, EnemyAttacks) {
+	Enemy* dummy = new Enemy(7);
+	Character* mageDummy = new MageChar("Jeff", 20.0, 5.0, 20.0);
+	dummy->attack(mageDummy);
+	EXPECT_DOUBLE_EQ(mageDummy->getCurHp(), 19.5);
+	delete dummy;
+}
 #endif //__ENEMY_TEST_HPP__
