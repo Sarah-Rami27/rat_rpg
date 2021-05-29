@@ -24,6 +24,7 @@ ADD_LIBRARY(game_lib STATIC
 
     header/WeaponDecorator.hpp
     src/DamageIncrease.cpp
+    src/CritChance.cpp
 
     src/Game.cpp 
     src/Enemy.cpp 
