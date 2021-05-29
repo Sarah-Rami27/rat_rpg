@@ -18,7 +18,7 @@ TEST(WarriorChar, defaultWarrior){
     std::string name = "Remy The Rat";
     EXPECT_EQ(warrior->getName(), name);
 }
-/* Mage tests*/
+/* Mage Tests*/
 TEST(MageChar, mageAttack){
     Character* mage = new MageChar();
     Enemy* enemy = new Enemy(0);
@@ -48,5 +48,37 @@ TEST(MageChar, mageIncHealth){
     mage->increaseHealth(2);
     EXPECT_EQ(mage->getCurHp(),15 );
 }
+
+/* Warrior Tests*/
+TEST(WarriorChar, WarrAttack){
+    Character* test = new WarriorChar();
+    Enemy* enemy = new Enemy(0);
+    test->attack(enemy);
+    EXPECT_EQ(enemy->getHp(), 9.0);
+}
+TEST(WarriorChar, WarrDefend){
+    Character* test = new WarriorChar();
+    test->defend();
+    EXPECT_EQ(test->getDef(), 20);
+}
+TEST(WarriorChar, WarrReduceDef){
+    Character* test = new WarriorChar();
+    test->reduceDefense();
+    EXPECT_DOUBLE_EQ(test->getDef(), 5);
+}
+TEST(WarriorChar, WarrHealth){
+    Character* test = new WarriorChar();
+    test->reduceHealth(15);
+    EXPECT_EQ(test->getCurHp(), 15);
+}
+
+TEST(WarriorChar, WarrIncHealth){
+    Character* test = new WarriorChar();
+    EXPECT_EQ(test->getCurHp(), 20);
+    test->reduceHealth(15);
+    test->increaseHealth(2);
+    EXPECT_EQ(test->getCurHp(),17 );
+}
+
 
 #endif
