@@ -13,5 +13,10 @@ TEST(MageChar, defaultMage){
     EXPECT_EQ(mage->getName(), name);
 }
 
+TEST(WarriorChar, defaultWarrior){
+    Character* warrior = new WarriorChar();
+    std::string name = "Remy The Rat";
+    EXPECT_EQ(warrior->getName(), name);
+}
 
 #endif
