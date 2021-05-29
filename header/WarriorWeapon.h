@@ -6,7 +6,7 @@
 class WarriorWeapon: public Weapon {
     public:
         WarriorWeapon();
-        WarriorWeapon(double, double, int, double, double ); 
+        WarriorWeapon(double, double); 
         ~WarriorWeapon(); 
         double calculateDamage(double, double); 
         double calculateLifeDrain(); 

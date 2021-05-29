@@ -6,10 +6,12 @@
 class WeaponDecorator: public Weapon {
     protected:
         Weapon* weapon; 
+        int levelNum;
 
     public:
-        WeaponDecorator(Weapon* weapon) {
+        WeaponDecorator(Weapon* weapon, int levelNum) {
             this->weapon = weapon; 
+            this->levelNum = levelNum;
         }
         ~WeaponDecorator() {
             delete this->weapon; 

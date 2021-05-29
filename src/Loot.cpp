@@ -4,12 +4,8 @@
 #include "../header/Loot.h"
 
 Weapon* Loot::spawnWeapon(int levelNum, ClassTypeFactory* factory) {
-	double minDamage = (levelNum / 3.00) + 1.00;
-	double maxDamage = (levelNum / 3.00) + 5.00;
-	int numHits = 1;
-	double critChance = 0.20;
-	double piercing = 0.00;
-	return factory->createWeapon(minDamage, maxDamage, numHits, critChance, piercing);
+	return factory->createWeapon(levelNum);		// This will create the base weapon scaled to level
+	// We will create/apply the perks here and return the last perk object
 }
 
 Armor* Loot::spawnArmor(int levelNum, ClassTypeFactory* factory) {

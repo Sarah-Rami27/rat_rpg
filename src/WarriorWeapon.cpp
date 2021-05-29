@@ -6,17 +6,11 @@
 WarriorWeapon::WarriorWeapon() {
     this->minDamage = 1; 
     this->maxDamage = 1; 
-    this->numHits = 1;
-    this->critChance = 0;
-    this->piercing = 0;
 }
 
-WarriorWeapon::WarriorWeapon(double minDamage, double maxDamage, int numHits, double critChance, double piercing) {
+WarriorWeapon::WarriorWeapon(double minDamage, double maxDamage) {
     this->minDamage = minDamage; 
     this->maxDamage = maxDamage; 
-    this->numHits = numHits;
-    this->critChance = critChance;
-    this->piercing = piercing;
 }
 
 WarriorWeapon::~WarriorWeapon() {

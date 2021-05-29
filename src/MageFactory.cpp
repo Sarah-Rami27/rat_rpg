@@ -16,8 +16,10 @@ Character* MageFactory::createCharacter() {
     return new MageChar();  
 }
 
-Weapon* MageFactory::createWeapon() {
-    return new MageWeapon(); 
+Weapon* MageFactory::createWeapon(int levelNum) {
+    double minDamage = (levelNum / 3.00) + 1.00;
+	double maxDamage = (levelNum / 3.00) + 5.00;
+    return new MageWeapon(minDamage, maxDamage); 
 }
 
 Armor* MageFactory::createArmor() {

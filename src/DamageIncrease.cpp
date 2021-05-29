@@ -3,11 +3,11 @@
 
 #include "../header/DamageIncrease.h"
 
-DamageIncrease::DamageIncrease(Weapon* weapon): WeaponDecorator(weapon) {}
+DamageIncrease::DamageIncrease(Weapon* weapon, int levelNum): WeaponDecorator(weapon, levelNum) {}
 
 DamageIncrease::~DamageIncrease() {}
 
 double DamageIncrease::calculateDamage(double playerAtk, double enemyDef) {
-    return 10 + WeaponDecorator::calculateDamage(playerAtk, enemyDef); 
+    return (levelNum * 2) + WeaponDecorator::calculateDamage(playerAtk, enemyDef); 
 }
 #endif
