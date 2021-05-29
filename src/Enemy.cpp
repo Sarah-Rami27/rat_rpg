@@ -15,7 +15,7 @@ Enemy::Enemy(int levelNum) {
  /* Enemy will be generated based on levelNum 
  *  Current equation: (#/2.0) + 10.0
  */
-   this->name = "Skinner " + to_string(levelNum);
+   this->name = "Chef Skinner " + to_string(levelNum);
    this->hp = (levelNum / 2.0) + 10.0;
    this->atk = (levelNum / 2.0) + 2.0;
    this->def = (levelNum / 2.0);
