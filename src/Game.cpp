@@ -130,7 +130,7 @@ void Game::spawnLoot() {
         break;
     }
 
-    player->increaseHealth(loot.spawnFood());
+    player->increaseHealth(player->getMaxHp() * loot.spawnFood());
     cout << endl;
 }
 
