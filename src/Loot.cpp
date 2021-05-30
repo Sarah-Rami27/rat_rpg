@@ -9,7 +9,7 @@ Weapon* Loot::spawnWeapon(int levelNum, ClassTypeFactory* factory) {
 }
 
 Armor* Loot::spawnArmor(int levelNum, ClassTypeFactory* factory) {	
-	return factory->createArmor(leveNum);
+	return factory->createArmor(levelNum);
 }
 
 double Loot::spawnFood() { //returns food ratio for game to use in tandem with maxhp
