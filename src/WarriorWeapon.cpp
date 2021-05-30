@@ -3,9 +3,10 @@
 
 #include "../header/WarriorWeapon.h"
 
+
 WarriorWeapon::WarriorWeapon() {
     this->minDamage = 1; 
-    this->maxDamage = 1; 
+    this->maxDamage = 2; 
 }
 
 WarriorWeapon::WarriorWeapon(double minDamage, double maxDamage) {
@@ -18,7 +19,7 @@ WarriorWeapon::~WarriorWeapon() {
 }
 
 double WarriorWeapon::calculateDamage(double playerAtk, double enemyDef ) {
-    return this->maxDamage; 
+    return playerAtk + rng.pickDouble(minDamage, maxDamage); 
 }
 
 double WarriorWeapon::calculateLifeDrain() {

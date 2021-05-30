@@ -20,8 +20,9 @@ Weapon* WarriorFactory::createWeapon(int levelNum) {
     return new WarriorWeapon(minDamage, maxDamage); 
 }
 
-Armor* WarriorFactory::createArmor() {
-    return new WarriorArmor(); 
+Armor* WarriorFactory::createArmor(int levelNum) {
+    double def = levelNum / 5.00;
+    return new WarriorArmor(def); 
 }
 
 #endif 

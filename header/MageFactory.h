@@ -10,7 +10,7 @@ class MageFactory: public ClassTypeFactory {
         ~MageFactory(); 
         Character* createCharacter();
         Weapon* createWeapon(int);
-        Armor* createArmor();  
+        Armor* createArmor(int);  
 };
 
 #endif 

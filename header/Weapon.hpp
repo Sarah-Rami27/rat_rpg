@@ -2,6 +2,7 @@
 #define __WEAPON_HPP__
 
 #include <iostream>
+#include "Rng.h"
 
 using namespace std;
 
@@ -9,6 +10,7 @@ class Weapon {
     protected:
         double minDamage; 
         double maxDamage;
+        RNG rng;
 
     public:
         virtual double calculateDamage(double, double) = 0;     //passes in the character's atk and Enemy's def
