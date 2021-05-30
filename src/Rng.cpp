@@ -18,4 +18,8 @@ double RNG::pickDouble(double min, double max) {
     return result;
 }
 
+int RNG::pickInt(int min, int max) {
+    return rand()%(max-min+1)+min;
+}
+
 #endif //__RNG_CPP__

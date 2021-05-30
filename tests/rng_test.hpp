@@ -37,4 +37,22 @@ TEST(RngTest, pickDoubleSameInput) {
 	EXPECT_EQ(random, 5.0);
 	delete rng;	
 }
+
+TEST(RngTest, pickIntGeneric) {
+	srand(1);
+	RNG* rng = new RNG();
+	int random = rng->pickInt(2, 7);
+	EXPECT_LE(2, random);
+	EXPECT_GE(7, random);
+	delete rng;	
+}
+
+TEST(RngTest, pickIntSameInput) {
+	srand(1);
+	RNG* rng = new RNG();
+	int random = rng->pickInt(5, 5);
+	EXPECT_EQ(random, 5);
+	delete rng;	
+}
+
 #endif //__RNG_TEST_HPP__
