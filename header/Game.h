@@ -5,6 +5,7 @@
 #include "WarriorFactory.h"
 #include "MageFactory.h"
 #include "Enemy.h"
+#include "Loot.h"
 
 class Game {
     private: 

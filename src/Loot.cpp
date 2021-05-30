@@ -4,12 +4,38 @@
 #include "../header/Loot.h"
 
 Weapon* Loot::spawnWeapon(int levelNum, ClassTypeFactory* factory) {
-	return factory->createWeapon(levelNum);		// This will create the base weapon scaled to level
-	// We will create/apply the perks here and return the last perk object
+	stack<Weapon*> perkStack;
+	Weapon* currentWeapon = factory->createWeapon(levelNum);		// This will create the base weapon scaled to level
+	
+	perkStack.push(currentWeapon);
+	while (levelNum > 0) {
+		if (rng.roll(10, 100)) {
+			Weapon* damageIncrease = new DamageIncrease(perkStack.top(), levelNum); 	
+			currentWeapon = damageIncrease;
+			perkStack.push(currentWeapon); 
+		}
+		if (rng.roll(10, 100)) {
+			Weapon* critChance = new CritChance(perkStack.top(), levelNum); 
+			currentWeapon = critChance;	
+			perkStack.push(currentWeapon);
+		}
+		if (rng.roll(10, 100)) {
+			Weapon* piercing = new Piercing(perkStack.top(), levelNum); 
+			currentWeapon = piercing;	
+			perkStack.push(currentWeapon);	
+		}
+		if (rng.roll(10, 100)) {
+			Weapon* extraHit = new ExtraHit(perkStack.top(), levelNum); 
+			currentWeapon = extraHit;	
+			perkStack.push(currentWeapon);	
+		}
+		levelNum--; 
+	}
+	
+	return currentWeapon;
 }
 
 Armor* Loot::spawnArmor(int levelNum, ClassTypeFactory* factory) {	
-	RNG rng; 
 	double def = rng.pickDouble(levelNum * 0.5, levelNum * 1.5);
 	return factory->createArmor(levelNum + def);
 }

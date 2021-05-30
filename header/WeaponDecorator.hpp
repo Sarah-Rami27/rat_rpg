@@ -19,6 +19,9 @@ class WeaponDecorator: public Weapon {
         double calculateDamage(double playerAtk, double enemyDef) {
             return weapon->calculateDamage(playerAtk, enemyDef); 
         }
+        virtual void printStats(std::ostream& out) {
+            return weapon->printStats(cout);
+        }
 
 
 

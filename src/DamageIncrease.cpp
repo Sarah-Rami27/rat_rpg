@@ -3,15 +3,21 @@
 
 #include "../header/DamageIncrease.h"
 
-DamageIncrease::DamageIncrease(Weapon* weapon, int levelNum): WeaponDecorator(weapon, levelNum) {}
+DamageIncrease::DamageIncrease(Weapon* weapon, int levelNum): WeaponDecorator(weapon, levelNum) {
+    RNG rng;
+    double min = levelNum * 1.5;
+    double max = levelNum * 2.5;
+    extraDamage = rng.pickDouble(min , max);
+}
 
 DamageIncrease::~DamageIncrease() {}
 
 double DamageIncrease::calculateDamage(double playerAtk, double enemyDef) {
-    RNG rng;
-    double min = levelNum * 1.5;
-    double max = levelNum * 2.5;
-    double result = rng.pickDouble(min , max);
-    return (result) +  WeaponDecorator::calculateDamage(playerAtk, enemyDef); 
+    return (extraDamage) +  WeaponDecorator::calculateDamage(playerAtk, enemyDef); 
+}
+
+void DamageIncrease::printStats(std::ostream& out) {
+    cout << "Extra Damage: " << extraDamage << endl;
+    WeaponDecorator::printStats(out);
 }
 #endif

@@ -55,7 +55,83 @@ void Game::spawnEnemy() {
 }
 
 void Game::spawnLoot() {
+    Loot loot; 
+    int playerInput;
 
+    Weapon* newWeapon = loot.spawnWeapon(levelNum, factory); 
+    cout << "You found a new weapon!" << endl;
+    std::string weaponPrompt = "Do you want to replace your current weapon?\n1) Yes\n2) No\n3) Compare stats\nInput: ";
+    
+    while (true) {
+        cout << weaponPrompt; 
+        cin >> playerInput; 
+        cout << endl;
+        if (playerInput == 1) {
+            delete player->getCurrWeapon();
+            player->setCurrWeapon(newWeapon);
+            cout << "You take the new weapon." << endl;
+        }
+        else if (playerInput == 2) {
+            delete newWeapon; 
+            cout << "You leave the new weapon." << endl;
+        }
+        else if (playerInput == 3) {
+            cout << "NEW WEAPON STATS" << endl; 
+            cout << "================" << endl;
+            newWeapon->printStats(cout);
+            cout << endl; 
+            cout << "CURRENT WEAPON STATS" << endl; 
+            cout << "====================" << endl;
+            player->getCurrWeapon()->printStats(cout);
+            cout << endl;
+            continue; 
+        }
+        else {
+            cout << "Enter a valid input: " << endl;
+            continue;
+        }
+        cout << endl;
+        break;
+    }
+    
+    Armor* newArmor = loot.spawnArmor(levelNum, factory);
+    cout << "You found new armor!" << endl;
+    std::string armorPrompt = "Do you want to replace your current armor?\n1) Yes\n2) No\n3) Compare stats\nInput: ";
+    
+    while (true) {
+        cout << armorPrompt; 
+        cin >> playerInput; 
+        cout << endl;
+        if (playerInput == 1) {
+            delete player->getCurrArmor();
+            player->setCurrArmor(newArmor);
+            cout << "You take the new armor." << endl;
+        }
+        else if (playerInput == 2) {
+            delete newArmor; 
+            cout << "You leave the new armor." << endl;
+        }
+        else if (playerInput == 3) {
+            cout << "NEW ARMOR STATS" << endl;
+            cout << "===============" << endl; 
+            newArmor->printStats(cout); 
+            cout << endl;
+            cout << "CURRENT ARMOR STATS" << endl; 
+            cout << "===================" << endl;
+            player->getCurrArmor()->printStats(cout);
+            cout << endl;
+            continue; 
+        }
+        else {
+            cout << "Enter a valid input: " << endl;
+            continue;
+        }
+        cout << endl;
+        break;
+    }
+
+    player->increaseHealth(loot.spawnFood());
+    cout << endl;
 }
 
 void Game::startCombat() {
@@ -76,7 +152,9 @@ void Game::startCombat() {
 
             if(enemy->getHp() <= 0){                            //player wins
 		cout << "You have slain the enemy! Your rat legend continues." << endl << endl;
-                spawnLoot();
+                if (levelNum % 5 == 0) {
+                    spawnLoot();   
+                }
                 delete this->enemy;
                 ++levelNum;
                 return;

@@ -5,10 +5,13 @@
 #include "Rng.h"
 
 class CritChance: public WeaponDecorator {
+    private:
+        double critChance = 0.05; 
     public:
         CritChance(Weapon*, int);
         ~CritChance();
         double calculateDamage(double, double);
+        void printStats(std::ostream&);
 };
 
 #endif

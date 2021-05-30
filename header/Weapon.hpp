@@ -19,7 +19,6 @@ class Weapon {
         }
         virtual void printStats(std::ostream& out) {
             out << "Damage Range: " << minDamage << " - " << maxDamage << endl;
-            //"\nNumber of hits: " << numHits << "\nCrit Chance: " << critChance << "\nPiercing: " << piercing << endl; 
         }
 
 };

@@ -5,10 +5,13 @@
 #include "Rng.h"
 
 class Piercing : public WeaponDecorator{
+    private:
+        double piercing; 
     public:
         Piercing(Weapon*, int);
         ~Piercing();
         double calculateDamage(double, double);
+        void printStats(std::ostream&);
 };
 
 #endif
