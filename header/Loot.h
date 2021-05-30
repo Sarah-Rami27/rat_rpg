@@ -6,12 +6,18 @@
 #include "Rng.h"
 #include "Character.hpp"
 #include "ClassTypeFactory.hpp"
+#include "DamageIncrease.h"
+#include "CritChance.h"
+#include "Piercing.h"
+#include "ExtraHit.h"
+#include <stack>
 
 using namespace std;
 
 class Loot {
 protected:
    RNG rng;
+   stack<Weapon*> perkStack;
 public:
    Weapon* spawnWeapon(int, ClassTypeFactory*);
    Armor* spawnArmor(int, ClassTypeFactory*);
