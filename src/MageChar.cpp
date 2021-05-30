@@ -54,7 +54,13 @@ void MageChar::reduceHealth(double damage) {
 }
 
 void MageChar::increaseHealth(double heal) {
-    if (heal == 0.00) {
+    if(curHp == maxHp && heal != 0.00) {
+   	cout << "You're full!, best leave that for another adventurer" << endl; 
+    }
+    else if(curHp == Hp) {
+	cout << "Well, you didn't need anything anyway" << endl;
+    }
+    else if (heal == 0.00) {
 	cout << "Your health bar is just as disappointed as Django..." << endl;
        cout << "You have " << "\033[;32m" << this->curHp << "\033[0m" << " of " << "\033[;32m" << this->maxHp << "\033[0m" << " health remaining!" << endl;
     }
