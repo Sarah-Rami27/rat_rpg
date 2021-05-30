@@ -19,8 +19,8 @@ TEST(MageFactoryTest, CreateArmor) {
     std::stringstream ss; 
 
     ClassTypeFactory* test = new MageFactory(); 
-    Armor* armor = test->createArmor();
-    std::string stats = "Def: 1\n";
+    Armor* armor = test->createArmor(1);
+    std::string stats = "Def: 0.2\n";
     armor->printStats(ss);
     EXPECT_EQ(ss.str(), stats);
 }
