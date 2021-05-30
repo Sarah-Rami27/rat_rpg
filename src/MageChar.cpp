@@ -32,6 +32,7 @@ void MageChar::attack(Enemy* enemy) {
 }
 
 void MageChar::defend() {
+    cout << endl << "You assume a defensive position." << endl;
     this->def *= 1.5;
 }
 

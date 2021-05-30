@@ -35,6 +35,7 @@ void WarriorChar::attack(Enemy* enemy) {
 }
 
 void WarriorChar::defend() {
+    cout << endl << "You assume a defensive position." << endl;
     this->def *= 2.0; 
 }
 

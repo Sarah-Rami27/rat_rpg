@@ -30,6 +30,7 @@ double Enemy::getAtk() const { return this->atk; }
 double Enemy::getDef() const { return this->def; }
 
 void Enemy::attack(Character* target) {
+   cout << this->name << " swings his pan!" << endl << endl;
    target->reduceHealth(this->atk);
 }
 
