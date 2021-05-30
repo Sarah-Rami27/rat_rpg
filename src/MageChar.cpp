@@ -57,7 +57,7 @@ void MageChar::increaseHealth(double heal) {
     if(curHp == maxHp && heal != 0.00) {
    	cout << "You're full!, best leave that for another adventurer" << endl; 
     }
-    else if(curHp == Hp) {
+    else if(curHp == maxHp) {
 	cout << "Well, you didn't need anything anyway" << endl;
     }
     else if (heal == 0.00) {
