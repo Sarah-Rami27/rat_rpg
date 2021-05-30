@@ -47,7 +47,8 @@ void WarriorChar::reduceHealth(double damage) {
     if(this->def < damage){
        this->curHp = this->curHp - (damage - this->def);
        cout << "You took " << "\033[;31m" << damage << "\033[0m" << " damage, ouch." << endl;	
-    }
+       cout << "You have " << "\033[;32m" << this->curHp << "\033[0m" << " of " << "\033[;32m" << this->maxHp << "\033[0m" << " health remaining!" << endl;
+}
     else { cout << "Your defense was too high to take damage! Ratthew, the Gym Rat would be proud." << endl; }
 }
 
