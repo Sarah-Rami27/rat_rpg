@@ -9,6 +9,10 @@
 #include "armor_test.hpp"
 #include "damage_increase_test.hpp"
 #include "crit_chance_test.hpp"
+#include "extra_hit_test.hpp"
+#include "piercing_test.hpp"
+#include "enemy_test.hpp"
+
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);

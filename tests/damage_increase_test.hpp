@@ -20,7 +20,7 @@ TEST(DamageIncreaseTest, LevelFour) {
     EXPECT_TRUE(6 < damage < 10);
 }
 
-TEST(DamageIncraseTest, StackedPerk) {
+TEST(DamageIncreaseTest, StackedPerk) {
     Weapon* warWep = new WarriorWeapon(); 
     Weapon* dmgInc = new DamageIncrease(warWep, 3);
     Weapon* dmgInc2 = new DamageIncrease(dmgInc, 3);
