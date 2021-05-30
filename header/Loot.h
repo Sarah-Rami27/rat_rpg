@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include "Rng.h"
 #include "Character.hpp"
 #include "ClassTypeFactory.hpp"
 
