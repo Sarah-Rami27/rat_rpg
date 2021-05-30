@@ -36,6 +36,7 @@ void Game::setFactory(int charType) {
 }
 
 void Game::displayOptions() {
+    cout << endl;
     cout << "Rat Hero!, Pick your next move! (input a number)" << endl;
     cout << "1) Attack the enemy!" << endl;
     cout << "2) Defend!" << endl;
@@ -50,7 +51,7 @@ void Game::createPlayer() {
 void Game::spawnEnemy() {
     cout << "You have encountered an enemy!\n";
     this->enemy = new Enemy(this->levelNum);
-    cout << enemy->getName() << " approaches!" << endl << endl;
+    cout << enemy->getName() << " approaches!" << endl;
 }
 
 void Game::spawnLoot() {
@@ -74,6 +75,7 @@ void Game::startCombat() {
             player->attack(enemy);                              //player attacks first
 
             if(enemy->getHp() <= 0){                            //player wins
+		cout << "You have slain the enemy!, your rat legend continues." << endl << endl;
                 spawnLoot();
                 delete this->enemy;
                 ++levelNum;
