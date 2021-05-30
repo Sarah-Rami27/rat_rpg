@@ -9,9 +9,6 @@ class WarriorWeapon: public Weapon {
         WarriorWeapon(double, double); 
         ~WarriorWeapon(); 
         double calculateDamage(double, double); 
-        double calculateLifeDrain(); 
-
-
 };
 
 #endif 

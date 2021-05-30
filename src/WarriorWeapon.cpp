@@ -22,8 +22,4 @@ double WarriorWeapon::calculateDamage(double playerAtk, double enemyDef ) {
     return playerAtk + rng.pickDouble(minDamage, maxDamage); 
 }
 
-double WarriorWeapon::calculateLifeDrain() {
-    return 0.0; 
-}
-
 #endif

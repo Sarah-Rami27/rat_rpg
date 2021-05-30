@@ -21,8 +21,4 @@ double MageWeapon::calculateDamage(double playerAtk, double enemyDef) {
     return playerAtk + rng.pickDouble(minDamage, maxDamage); 
 }
 
-double MageWeapon::calculateLifeDrain() {
-    return 0.0; 
-}
-
 #endif
