@@ -61,7 +61,7 @@ void WarriorChar::increaseHealth(double heal) {
    }
    else {
 	this->curHp += heal;
-	cout << "You heal for " << "\033[;32m" << heal << "\033[0m" << " !" << endl;
+	cout << "You heal for " << "\033[;32m" << heal << "\033[0m" << " health!" << endl;
    }
 }
 
