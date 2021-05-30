@@ -14,7 +14,7 @@ double CritChance::calculateDamage(double playerAtk, double enemyDef) {
         critChance += rng.pickDouble(0.02, 0.04);
         levelNum--; 
     }
-    if(rng.roll(critChance, 1)) {
+    if(rng.rollDouble(critChance, 1.0)) {
         return 2 * WeaponDecorator::calculateDamage(playerAtk, enemyDef); 
     }
     else {

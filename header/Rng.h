@@ -7,6 +7,7 @@
 class RNG {
    public:
 	bool roll(int, int);
+	bool rollDouble(double, double);
 	double pickDouble(double, double);
 	int pickInt(int, int);
 };

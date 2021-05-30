@@ -11,6 +11,14 @@ bool RNG::roll(int good, int all) { //good = success, all = total rolls
     else { return (double)rand()/RAND_MAX <= succRate; }
 }
 
+bool RNG::rollDouble(double good, double all) {
+    double succRate = good/all;
+
+    if(succRate == 0.00) { return false; }
+    else if(succRate == 1.00) { return true; }
+    else { return (double)rand()/RAND_MAX <= succRate; }
+}
+
 double RNG::pickDouble(double min, double max) {
     double ratio = (double)rand()/RAND_MAX;
     double result = min + ((max - min) * ratio);
