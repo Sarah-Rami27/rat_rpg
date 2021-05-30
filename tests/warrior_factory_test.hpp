@@ -19,7 +19,7 @@ TEST(WarriorFactoryTest, CreateArmor) {
     std::stringstream ss; 
 
     ClassTypeFactory* test = new WarriorFactory(); 
-    Armor* armor = test->createArmor();
+    Armor* armor = test->createArmor(5);
     std::string stats = "Def: 1\n";
     armor->printStats(ss);
     EXPECT_EQ(ss.str(), stats);
