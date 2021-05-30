@@ -6,6 +6,7 @@
 Weapon* Loot::spawnWeapon(int levelNum, ClassTypeFactory* factory) {
 	stack<Weapon*> perkStack;
 	Weapon* currentWeapon = factory->createWeapon(levelNum);		// This will create the base weapon scaled to level
+	
 	perkStack.push(currentWeapon);
 	while (levelNum > 0) {
 		if (rng.roll(15, 100)) {
@@ -30,6 +31,7 @@ Weapon* Loot::spawnWeapon(int levelNum, ClassTypeFactory* factory) {
 		}
 		levelNum--; 
 	}
+	
 	return currentWeapon;
 }
 
