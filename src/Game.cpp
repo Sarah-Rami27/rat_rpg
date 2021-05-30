@@ -75,7 +75,7 @@ void Game::startCombat() {
             player->attack(enemy);                              //player attacks first
 
             if(enemy->getHp() <= 0){                            //player wins
-		cout << "You have slain the enemy!, your rat legend continues." << endl << endl;
+		cout << "You have slain the enemy! Your rat legend continues." << endl << endl;
                 spawnLoot();
                 delete this->enemy;
                 ++levelNum;
