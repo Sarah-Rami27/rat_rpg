@@ -21,6 +21,22 @@ TEST(RngTest, rollGuaranteedFailure) {
 	delete rng;
 }
 
+TEST(RngTest, rollDoubleGuaranteedSuccess) {
+	srand(1);
+	RNG* rng = new RNG();
+	bool succ = rng->roll(1.0,1.0);
+	EXPECT_EQ(succ, true);
+	delete rng;
+}
+
+TEST(RngTest, rollDoubleGuaranteedFailure) {
+	srand(1);
+	RNG* rng = new RNG();
+	bool succ = rng->roll(0.0,1.0);
+	EXPECT_EQ(succ, false);
+	delete rng;
+}
+
 TEST(RngTest, pickDoubleGeneric) {
 	srand(1);
 	RNG* rng = new RNG();
