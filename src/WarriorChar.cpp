@@ -52,7 +52,10 @@ void WarriorChar::reduceHealth(double damage) {
 }
 
 void WarriorChar::increaseHealth(double heal) {
-   if((this->curHp + heal) >= this->maxHp) {
+   if (heal == 0.00) {
+	cout << "Your health bar is just as disappointed as Django..." << endl;
+   }
+   if else((this->curHp + heal) >= this->maxHp) {
        this->curHp = this->maxHp;
        cout << "You fully heal! Rattacular!" << endl;
    }
