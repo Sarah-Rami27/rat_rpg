@@ -60,52 +60,62 @@ void Game::spawnLoot() {
 
     Weapon* newWeapon = loot.spawnWeapon(levelNum, factory); 
     cout << "You found a new weapon!" << endl;
-    std::string weaponPrompt = "Do you want to replace your current weapon?\n1) Yes\n2) No\n3) Compare stats\n";
-    cout << weaponPrompt; 
-    cin >> playerInput; 
-    while (playerInput != 1 && playerInput != 2 && playerInput != 3) {
-        switch (playerInput) {
-            case 1: 
-                delete player->getCurrWeapon();
-                player->setCurrWeapon(newWeapon);
-            case 2: 
-                delete newWeapon; 
-            case 3: 
-                cout << "NEW WEAPON STATS" << endl; 
-                newWeapon->printStats(cout); 
-                cout << "CURRENT WEAPON STATS" << endl; 
-                player->getCurrWeapon()->printStats(cout);
-                cout << weaponPrompt;
-                cin >> playerInput; 
-            default: 
-                cout << "Enter a valid input: " << endl; 
-                cin >> playerInput; 
+    std::string weaponPrompt = "Do you want to replace your current weapon?\n1) Yes\n2) No\n3) Compare stats\nInput: ";
+    
+    while (true) {
+        cout << weaponPrompt; 
+        cin >> playerInput; 
+        if (playerInput == 1) {
+            delete player->getCurrWeapon();
+            player->setCurrWeapon(newWeapon);
+            cout << "You take the new weapon." << endl;
         }
+        else if (playerInput == 2) {
+            delete newWeapon; 
+            cout << "You leave the new weapon." << endl;
+        }
+        else if (playerInput == 3) {
+            cout << "NEW WEAPON STATS" << endl; 
+            newWeapon->printStats(cout); 
+            cout << "CURRENT WEAPON STATS" << endl; 
+            player->getCurrWeapon()->printStats(cout);
+            continue; 
+        }
+        else {
+            cout << "Enter a valid input: " << endl;
+            continue;
+        }
+        break;
     }
 
     Armor* newArmor = loot.spawnArmor(levelNum, factory);
     cout << "You found new armor!" << endl;
-    std::string armorPrompt = "Do you want to replace your current armor?\n1) Yes\n2) No\n3) Compare stats\n";
-    cout << armorPrompt; 
-    cin >> playerInput; 
-    while (playerInput != 1 && playerInput != 2 && playerInput != 3) {
-        switch (playerInput) {
-            case 1: 
-                delete player->getCurrArmor();
-                player->setCurrArmor(newArmor);
-            case 2: 
-                delete newArmor; 
-            case 3: 
-                cout << "NEW ARMOR STATS" << endl; 
-                newArmor->printStats(cout); 
-                cout << "CURRENT ARMOR STATS" << endl; 
-                player->getCurrArmor()->printStats(cout);
-                cout << armorPrompt;
-                cin >> playerInput; 
-            default: 
-                cout << "Enter a valid input: " << endl; 
-                cin >> playerInput; 
+    std::string armorPrompt = "Do you want to replace your current armor?\n1) Yes\n2) No\n3) Compare stats\nInput: ";
+    
+    while (true) {
+        cout << armorPrompt; 
+        cin >> playerInput; 
+        if (playerInput == 1) {
+            delete player->getCurrArmor();
+            player->setCurrArmor(newArmor);
+            cout << "You take the new armor." << endl;
         }
+        else if (playerInput == 2) {
+            delete newArmor; 
+            cout << "You leave the new armor." << endl;
+        }
+        else if (playerInput == 3) {
+            cout << "NEW ARMOR STATS" << endl; 
+            newArmor->printStats(cout); 
+            cout << "CURRENT ARMOR STATS" << endl; 
+            player->getCurrArmor()->printStats(cout);
+            continue; 
+        }
+        else {
+            cout << "Enter a valid input: " << endl;
+            continue;
+        }
+        break;
     }
 
     player->increaseHealth(loot.spawnFood());
