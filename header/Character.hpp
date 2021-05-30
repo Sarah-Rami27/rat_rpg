@@ -38,6 +38,12 @@ class Character {
         void setCurrArmor(Armor* armor){
             this->currArmor = armor;
         }
+        Weapon* getCurrWeapon(){
+            return this->currWeapon;
+        }
+        Armor* getCurrArmor(){
+            return this->currArmor;
+        }
 
         string getName() const {
             return this->name;
