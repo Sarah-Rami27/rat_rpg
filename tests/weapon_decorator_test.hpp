@@ -57,5 +57,15 @@ TEST(DecoratorTest, fivePerks) {
     EXPECT_TRUE(38 <= perk4->calculateDamage(0,0) <= 38);
 }
 
+TEST(DecoratorTest, veryStacked) {
+    Weapon* test = new WarriorWeapon();
+    Weapon* perk4 = new Piercing(test, 5);
+    Weapon* perk1 = new CritChance(perk4, 5);
+    Weapon* perk2 = new DamageIncrease(perk1, 5);
+    Weapon* perk3 = new ExtraHit(perk2, 5);
+    Weapon* perk5 = new Piercing(perk3, 5);
+    Weapon* perk6 = new ExtraHit(perk5, 5);
+    EXPECT_TRUE(53.2 <= perk6->calculateDamage(1,5) <= 107 );
+}
 
 #endif
