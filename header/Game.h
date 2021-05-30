@@ -13,7 +13,8 @@ class Game {
         Character* player; 
         int levelNum; 
         Enemy* enemy; 
-
+	bool telegraph;
+	bool smashed;
     public:
         Game(); 
         ~Game();
