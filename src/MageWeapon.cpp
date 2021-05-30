@@ -5,7 +5,7 @@
 
 MageWeapon::MageWeapon() {
     this->minDamage = 1; 
-    this->maxDamage = 1; 
+    this->maxDamage = 2; 
 }
 
 MageWeapon::MageWeapon(double minDamage, double maxDamage) {
