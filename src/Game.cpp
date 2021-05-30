@@ -168,6 +168,15 @@ void Game::startCombat() {
         if(enemy->getHp() > 0){                             
             enemy->attack(player);                          //enemy attacks player
             if (player->getCurHp() <= 0) {
+		cout << endl;
+		cout<<R"(
+        ,-=-.       
+       /  +  \     
+       | ~~~ |    
+       |R.I.P|      
+,v,VvV,|_____|V,vV,v
+        )";
+		cout << endl;
                 return;                                     //enemy wins
             }
         }
