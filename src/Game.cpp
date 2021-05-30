@@ -140,7 +140,6 @@ void Game::startCombat() {
     spawnEnemy();
     while(player->getCurHp() > 0 && enemy->getHp() > 0 && !smashed){
         int userInput;
-	RNG rng;
 	
 	if(rng.roll(1,5)) { //head on attack!
     		cout << endl;

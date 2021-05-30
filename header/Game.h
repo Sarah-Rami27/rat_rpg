@@ -15,6 +15,7 @@ class Game {
         Enemy* enemy; 
 	bool telegraph;
 	bool smashed;
+	RNG rng;
     public:
         Game(); 
         ~Game();
