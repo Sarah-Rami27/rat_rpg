@@ -10,7 +10,7 @@
 TEST(DamageIncreaseTest, LevelZero) {
     Weapon* warWep = new WarriorWeapon(); 
     Weapon* dmgInc = new DamageIncrease(warWep, 0); 
-    EXPECT_DOUBLE_EQ(dmgInc->calculateDamage(0, 0), 1);
+    EXPECT_TRUE(1 <= dmgInc->calculateDamage(0, 0) <= 2);
 }
 
 TEST(DamageIncreaseTest, LevelFour) {

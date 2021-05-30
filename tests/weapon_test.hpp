@@ -9,7 +9,7 @@
 
 TEST(WarriorWeaponTest, DefaultCalcDmg) {
     Weapon* warWep = new WarriorWeapon(); 
-    EXPECT_EQ(warWep->calculateDamage(0, 0), 1); 
+    EXPECT_TRUE(1 <= warWep->calculateDamage(0, 0) <= 2); 
 }
 
 TEST(WarriorWeaponTest, DefaultCalcLifeDrain) {
@@ -19,7 +19,7 @@ TEST(WarriorWeaponTest, DefaultCalcLifeDrain) {
 
 TEST(MageWeaponTest, DefaultCalcDmg) {
     Weapon* magWep = new MageWeapon(); 
-    EXPECT_EQ(magWep->calculateDamage(0, 0), 1); 
+    EXPECT_TRUE(1 <= magWep->calculateDamage(0, 0) <= 2);
 }
 
 TEST(MageWeaponTest, DefaultCalcLifeDrain) {
