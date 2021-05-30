@@ -28,10 +28,11 @@ ADD_LIBRARY(game_lib STATIC
     src/Piercing.cpp
     src/ExtraHit.cpp
 
+    src/Loot.cpp
+
     src/Game.cpp 
     src/Enemy.cpp 
-    src/Rng.cpp
-    
+    src/Rng.cpp	    
 )
 
 TARGET_INCLUDE_DIRECTORIES(game_lib
