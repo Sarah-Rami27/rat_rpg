@@ -19,8 +19,8 @@ TEST(WarriorFactoryTest, CreateArmor) {
     std::stringstream ss; 
 
     ClassTypeFactory* test = new WarriorFactory(); 
-    Armor* armor = test->createArmor(5);
-    std::string stats = "Def: 1\n";
+    Armor* armor = test->createArmor(1);
+    std::string stats = "Def: 0.2\n";
     armor->printStats(ss);
     EXPECT_EQ(ss.str(), stats);
 }
@@ -29,7 +29,7 @@ TEST(WarriorFactoryTest, CreateWeapon) {
     std::stringstream ss; 
 
     ClassTypeFactory* test = new WarriorFactory(); 
-    Weapon* weapon = test->createWeapon(0);
+    Weapon* weapon = test->createWeapon(1);
     std::string stats = "Damage Range: 1 - 5\n";
     weapon->printStats(ss);
     EXPECT_EQ(ss.str(), stats);
