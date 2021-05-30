@@ -42,7 +42,8 @@ void Enemy::reduceHealth(double damage) {
    else {
       this->hp -= damageTaken; 
       if (this->hp <= 0) {
-         cout << endl << this->name + " died!" << endl;
+         cout << endl << this->name + " took " << "\033[;31m" << damageTaken << "\033[0m" << " damage!" << endl;
+         cout << this->name + " died!" << endl;
       }
       else {
 	 cout << endl;
