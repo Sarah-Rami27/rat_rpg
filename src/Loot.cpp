@@ -9,22 +9,22 @@ Weapon* Loot::spawnWeapon(int levelNum, ClassTypeFactory* factory) {
 	
 	perkStack.push(currentWeapon);
 	while (levelNum > 0) {
-		if (rng.roll(15, 100)) {
+		if (rng.roll(7, 100)) {
 			Weapon* damageIncrease = new DamageIncrease(perkStack.top(), levelNum); 	
 			currentWeapon = damageIncrease;
 			perkStack.push(currentWeapon); 
 		}
-		if (rng.roll(15, 100)) {
+		if (rng.roll(7, 100)) {
 			Weapon* critChance = new CritChance(perkStack.top(), levelNum); 
 			currentWeapon = critChance;	
 			perkStack.push(currentWeapon);
 		}
-		if (rng.roll(15, 100)) {
+		if (rng.roll(7, 100)) {
 			Weapon* piercing = new Piercing(perkStack.top(), levelNum); 
 			currentWeapon = piercing;	
 			perkStack.push(currentWeapon);	
 		}
-		if (rng.roll(15, 100)) {
+		if (rng.roll(7, 100)) {
 			Weapon* extraHit = new ExtraHit(perkStack.top(), levelNum); 
 			currentWeapon = extraHit;	
 			perkStack.push(currentWeapon);	
