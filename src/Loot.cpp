@@ -8,9 +8,8 @@ Weapon* Loot::spawnWeapon(int levelNum, ClassTypeFactory* factory) {
 	// We will create/apply the perks here and return the last perk object
 }
 
-Armor* Loot::spawnArmor(int levelNum, ClassTypeFactory* factory) {
-	double def = levelNum / 5.00;	
-	return factory->createArmor(def);
+Armor* Loot::spawnArmor(int levelNum, ClassTypeFactory* factory) {	
+	return factory->createArmor(leveNum);
 }
 
 double Loot::spawnFood() { //returns food ratio for game to use in tandem with maxhp
