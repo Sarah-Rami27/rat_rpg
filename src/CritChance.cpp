@@ -5,7 +5,7 @@
 
 CritChance::CritChance(Weapon* weapon, int levelNum): WeaponDecorator(weapon, levelNum) {
     while (levelNum > 0) {
-        critChance += rng.pickDouble(0.01, 0.02);
+        critChance += rng.pickDouble(0.02, 0.04);
         levelNum--; 
     }
 }
@@ -14,7 +14,7 @@ CritChance::~CritChance() {}
 
 double CritChance::calculateDamage(double playerAtk, double enemyDef) {
     RNG rng;
-    if(rng.roll(critChance, 1)) {
+    if(rng.rollDouble(critChance, 1.0)) {
         return 2 * WeaponDecorator::calculateDamage(playerAtk, enemyDef); 
     }
     else {

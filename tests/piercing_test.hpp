@@ -8,7 +8,7 @@
 TEST(PiercingTest, EnemyDefZero){
     Weapon* test = new WarriorWeapon();
     Weapon* pier = new Piercing(test, 0);
-    EXPECT_EQ(pier->calculateDamage(0,0), 1);
+    EXPECT_TRUE(1 <= pier->calculateDamage(0,0) <= 2);
 
 }
 

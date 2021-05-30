@@ -21,6 +21,22 @@ TEST(RngTest, rollGuaranteedFailure) {
 	delete rng;
 }
 
+TEST(RngTest, rollDoubleGuaranteedSuccess) {
+	srand(1);
+	RNG* rng = new RNG();
+	bool succ = rng->roll(1.0,1.0);
+	EXPECT_EQ(succ, true);
+	delete rng;
+}
+
+TEST(RngTest, rollDoubleGuaranteedFailure) {
+	srand(1);
+	RNG* rng = new RNG();
+	bool succ = rng->roll(0.0,1.0);
+	EXPECT_EQ(succ, false);
+	delete rng;
+}
+
 TEST(RngTest, pickDoubleGeneric) {
 	srand(1);
 	RNG* rng = new RNG();
@@ -37,4 +53,22 @@ TEST(RngTest, pickDoubleSameInput) {
 	EXPECT_EQ(random, 5.0);
 	delete rng;	
 }
+
+TEST(RngTest, pickIntGeneric) {
+	srand(1);
+	RNG* rng = new RNG();
+	int random = rng->pickInt(2, 7);
+	EXPECT_LE(2, random);
+	EXPECT_GE(7, random);
+	delete rng;	
+}
+
+TEST(RngTest, pickIntSameInput) {
+	srand(1);
+	RNG* rng = new RNG();
+	int random = rng->pickInt(5, 5);
+	EXPECT_EQ(random, 5);
+	delete rng;	
+}
+
 #endif //__RNG_TEST_HPP__
