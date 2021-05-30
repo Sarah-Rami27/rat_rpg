@@ -9,7 +9,7 @@ using namespace std;
 Game::Game() {
     factory = nullptr;
     player = nullptr;
-    levelNum = 0; 
+    levelNum = 1; 
     enemy = nullptr;
 }
 
@@ -36,7 +36,8 @@ void Game::setFactory(int charType) {
 }
 
 void Game::displayOptions() {
-    cout << "Pick your next move! (choose a number)" << endl;
+    cout << endl;
+    cout << "Rat Hero!, Pick your next move! (input a number)" << endl;
     cout << "1) Attack the enemy!" << endl;
     cout << "2) Defend!" << endl;
     cout << "Input: ";
@@ -48,8 +49,9 @@ void Game::createPlayer() {
 }
 
 void Game::spawnEnemy() {
-    cout << "You have encountered an enemy!\n" << endl;
+    cout << "You have encountered an enemy!\n";
     this->enemy = new Enemy(this->levelNum);
+    cout << enemy->getName() << " approaches!" << endl;
 }
 
 void Game::spawnLoot() {
@@ -73,6 +75,7 @@ void Game::startCombat() {
             player->attack(enemy);                              //player attacks first
 
             if(enemy->getHp() <= 0){                            //player wins
+		cout << "You have slain the enemy! Your rat legend continues." << endl << endl;
                 spawnLoot();
                 delete this->enemy;
                 ++levelNum;

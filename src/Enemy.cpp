@@ -30,6 +30,7 @@ double Enemy::getAtk() const { return this->atk; }
 double Enemy::getDef() const { return this->def; }
 
 void Enemy::attack(Character* target) {
+   cout << this->name << " swings his pan!" << endl;
    target->reduceHealth(this->atk);
 }
 
@@ -41,12 +42,12 @@ void Enemy::reduceHealth(double damage) {
    else {
       this->hp -= damageTaken; 
       if (this->hp <= 0) {
-         cout << this->name + " died!" << endl;
+         cout << endl << this->name + " died!" << endl;
       }
       else {
 	 cout << endl;
-         cout << this->name + " took " << damageTaken << " damage!" << endl;
-         cout << this->name + " has " << this->hp << " health remaining." << endl;
+         cout << this->name + " took " << "\033[;31m" << damageTaken << "\033[0m" << " damage!" << endl;
+         cout << this->name + " has " << "\033[1;35m" << this->hp << "\033[0m" << " health remaining." << endl;
 	 cout << endl;
       }
    }

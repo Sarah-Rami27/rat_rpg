@@ -35,6 +35,7 @@ void WarriorChar::attack(Enemy* enemy) {
 }
 
 void WarriorChar::defend() {
+    cout << endl << "You assume a defensive position." << endl;
     this->def *= 2.0; 
 }
 
@@ -45,15 +46,19 @@ void WarriorChar::reduceDefense() {
 void WarriorChar::reduceHealth(double damage) {
     if(this->def < damage){
        this->curHp = this->curHp - (damage - this->def);
+       cout << "You took " << "\033[;31m" << damage << "\033[0m" << " damage, ouch." << endl;	
     }
+    else { cout << "Your defense was too high to take damage! Ratthew, the Gym Rat would be proud." << endl; }
 }
 
 void WarriorChar::increaseHealth(double heal) {
    if((this->curHp + heal) >= this->maxHp) {
        this->curHp = this->maxHp;
+       cout << "You fully heal! Rattacular!" << endl;
    }
    else {
 	this->curHp += heal;
+	cout << "You heal for " << "\033[;32m" << heal << "\033[0m" << " !" << endl;
    }
 }
 
