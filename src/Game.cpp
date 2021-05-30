@@ -177,7 +177,7 @@ void Game::startCombat() {
 
         if(enemy->getHp() > 0){                             
             if(telegraph && userInput != 2) {
-		cout << "\e[1;31mSkinner ended you instantly!, perhaps you'll defend in another life...\e[0m" << endl;	
+		cout << "\e[1;31mSkinner ended you instantly! Perhaps you'll defend in another life...\e[0m" << endl;	
 		cout << endl;
 		cout << " ,-=-. " << endl;
 		cout << "/  +  \\" << endl;
