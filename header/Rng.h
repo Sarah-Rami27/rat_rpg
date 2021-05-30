@@ -8,6 +8,7 @@ class RNG {
    public:
 	bool roll(int, int);
 	double pickDouble(double, double);
+	int pickInt(int, int);
 };
 
 #endif //__RNG_H__
