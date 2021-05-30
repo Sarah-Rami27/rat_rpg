@@ -19,4 +19,8 @@ double Piercing::calculateDamage(double playerAtk, double enemyDef){
     return damage + WeaponDecorator::calculateDamage(playerAtk, enemyDef);
 }
 
+void Piercing::printStats(std::ostream& out) {
+    WeaponDecorator::printStats(out); 
+}
+
 #endif
