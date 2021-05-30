@@ -5,7 +5,7 @@
 
 MageWeapon::MageWeapon() {
     this->minDamage = 1; 
-    this->maxDamage = 1; 
+    this->maxDamage = 2; 
 }
 
 MageWeapon::MageWeapon(double minDamage, double maxDamage) {
@@ -18,7 +18,7 @@ MageWeapon::~MageWeapon() {
 }
 
 double MageWeapon::calculateDamage(double playerAtk, double enemyDef) {
-    return this->maxDamage; 
+    return playerAtk + rng.pickDouble(minDamage, maxDamage); 
 }
 
 double MageWeapon::calculateLifeDrain() {
