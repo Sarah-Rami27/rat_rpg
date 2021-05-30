@@ -28,7 +28,6 @@ ADD_LIBRARY(game_lib STATIC
     src/Piercing.cpp
     src/ExtraHit.cpp
 
-    header/Loot.h
     src/Loot.cpp
 
     src/Game.cpp 
