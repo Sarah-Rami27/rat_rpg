@@ -59,9 +59,11 @@ void WarriorChar::reduceHealth(double damage) {
 void WarriorChar::increaseHealth(double heal) {
     if(curHp == maxHp && heal != 0.00) {
    	cout << "You're full!, best leave that for another adventurer." << endl; 
+       cout << "You have " << "\033[;32m" << this->curHp << "\033[0m" << " of " << "\033[;32m" << this->maxHp << "\033[0m" << " health remaining!" << endl;
     }
     else if(curHp == maxHp) {
 	cout << "Well, you didn't need anything anyway" << endl;
+       cout << "You have " << "\033[;32m" << this->curHp << "\033[0m" << " of " << "\033[;32m" << this->maxHp << "\033[0m" << " health remaining!" << endl;
     }
    else if (heal == 0.00) {
 	cout << "Your health bar is just as disappointed as Django..." << endl;
