@@ -12,6 +12,7 @@
 #include "extra_hit_test.hpp"
 #include "piercing_test.hpp"
 #include "enemy_test.hpp"
+#include "loot_test.hpp"
 
 
 int main(int argc, char **argv) {

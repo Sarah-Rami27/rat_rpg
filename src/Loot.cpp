@@ -13,23 +13,22 @@ Armor* Loot::spawnArmor(int levelNum, ClassTypeFactory* factory) {
 }
 
 double Loot::spawnFood() { //returns food ratio for game to use in tandem with maxhp
-    RNG rng;	
-    if(rng->roll(1,100)) {
+    if(rng.roll(1,100)) {
 	cout << "You found" <<  "\e[1;33m RATATOUILLE\e[0m" << "!!!" << endl;
 	return 1.00;
     }	
 
-    if(rng->roll(1,5)) {
+    if(rng.roll(1,5)) {
 	cout << "You found" <<  "\e[1;35m STRAWBERRIES AND CHEESE\e[0m" << "!!" << endl; 
 	return 0.30;
     } 
 
-    if(rng->roll(2,5)) {
+    if(rng.roll(2,5)) {
 	cout << "You found" <<  "\e[1;34m LIGHTNING MUSHROOMS\e[0m" << "!" << endl; 
 	return 0.20;
     }
 
-    if(rng->roll(2,3)) {
+    if(rng.roll(2,3)) {
 	cout << "You found (edible)" <<  "\e[1;37m TRASH\e[0m" << "..." << endl; 
 	return 0.05;
     }

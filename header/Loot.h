@@ -10,6 +10,8 @@
 using namespace std;
 
 class Loot {
+protected:
+   RNG rng;
 public:
    Weapon* spawnWeapon(int, ClassTypeFactory*);
    Armor* spawnArmor(int, ClassTypeFactory*);
