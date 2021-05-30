@@ -30,7 +30,7 @@ TEST(WarriorFactoryTest, CreateWeapon) {
 
     ClassTypeFactory* test = new WarriorFactory(); 
     Weapon* weapon = test->createWeapon(1);
-    std::string stats = "Damage Range: 1 - 5\n";
+    std::string stats = "Damage Range: 1.33333 - 5.33333\n";
     weapon->printStats(ss);
     EXPECT_EQ(ss.str(), stats);
 }
