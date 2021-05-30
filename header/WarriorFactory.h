@@ -13,7 +13,7 @@ class WarriorFactory: public ClassTypeFactory {
         ~WarriorFactory(); 
         Character* createCharacter(); 
         Weapon* createWeapon(int);
-        Armor* createArmor(); 
+        Armor* createArmor(int); 
 };
 
 #endif 

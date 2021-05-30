@@ -22,8 +22,9 @@ Weapon* MageFactory::createWeapon(int levelNum) {
     return new MageWeapon(minDamage, maxDamage); 
 }
 
-Armor* MageFactory::createArmor() {
-    return new MageArmor();
+Armor* MageFactory::createArmor(int levelNum) {
+    double def = levelNum / 5.00;
+    return new MageArmor(def);
 }
 
 #endif
