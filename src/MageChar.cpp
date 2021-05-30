@@ -52,7 +52,7 @@ void MageChar::increaseHealth(double heal) {
     if (heal == 0.00) {
 	cout << "Your health bar is just as disappointed as Django..." << endl;
     }
-    if else ((this->curHp + heal) >= this->maxHp) {
+    else if ((this->curHp + heal) >= this->maxHp) {
 	this->curHp = this->maxHp;
 	cout << "You fully heal! Rattacular!" << endl;
     }
