@@ -169,11 +169,13 @@ void Game::startCombat() {
             enemy->attack(player);                          //enemy attacks player
             if (player->getCurHp() <= 0) {
 		cout << endl;
-		cout << " ,-=-. " << endl;
-		cout << "/  +  \\" << endl;
-		cout << "| ~~~ |" << endl;
-		cout << "|R.I.P|" << endl;
-		cout << "|_____|" << endl;
+		cout<<R"(
+        ,-=-.       
+       /  +  \     
+       | ~~~ |    
+       |R.I.P|      
+,v,VvV,|_____|V,vV,v
+        )";
 		cout << endl;
                 return;                                     //enemy wins
             }
