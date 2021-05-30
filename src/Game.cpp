@@ -65,6 +65,7 @@ void Game::spawnLoot() {
     while (true) {
         cout << weaponPrompt; 
         cin >> playerInput; 
+        cout << endl;
         if (playerInput == 1) {
             delete player->getCurrWeapon();
             player->setCurrWeapon(newWeapon);
@@ -76,18 +77,23 @@ void Game::spawnLoot() {
         }
         else if (playerInput == 3) {
             cout << "NEW WEAPON STATS" << endl; 
-            newWeapon->printStats(cout); 
+            cout << "================" << endl;
+            newWeapon->printStats(cout);
+            cout << endl; 
             cout << "CURRENT WEAPON STATS" << endl; 
+            cout << "====================" << endl;
             player->getCurrWeapon()->printStats(cout);
+            cout << endl;
             continue; 
         }
         else {
             cout << "Enter a valid input: " << endl;
             continue;
         }
+        cout << endl;
         break;
     }
-
+    
     Armor* newArmor = loot.spawnArmor(levelNum, factory);
     cout << "You found new armor!" << endl;
     std::string armorPrompt = "Do you want to replace your current armor?\n1) Yes\n2) No\n3) Compare stats\nInput: ";
@@ -95,6 +101,7 @@ void Game::spawnLoot() {
     while (true) {
         cout << armorPrompt; 
         cin >> playerInput; 
+        cout << endl;
         if (playerInput == 1) {
             delete player->getCurrArmor();
             player->setCurrArmor(newArmor);
@@ -105,21 +112,26 @@ void Game::spawnLoot() {
             cout << "You leave the new armor." << endl;
         }
         else if (playerInput == 3) {
-            cout << "NEW ARMOR STATS" << endl; 
+            cout << "NEW ARMOR STATS" << endl;
+            cout << "===============" << endl; 
             newArmor->printStats(cout); 
+            cout << endl;
             cout << "CURRENT ARMOR STATS" << endl; 
+            cout << "===================" << endl;
             player->getCurrArmor()->printStats(cout);
+            cout << endl;
             continue; 
         }
         else {
             cout << "Enter a valid input: " << endl;
             continue;
         }
+        cout << endl;
         break;
     }
 
     player->increaseHealth(loot.spawnFood());
-
+    cout << endl;
 }
 
 void Game::startCombat() {
