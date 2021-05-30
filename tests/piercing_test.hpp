@@ -22,7 +22,7 @@ TEST(PiercingTest, pierStack ){
     Weapon* test = new WarriorWeapon();
     Weapon* pier = new Piercing(test, 10);
     Weapon* pier2 = new Piercing(pier, 10);
-    EXPECT_TRUE(3.4 <= pier->calculateDamage(0,5) <= 6.7 );
+    EXPECT_TRUE(3.4 <= pier2->calculateDamage(0,5) <= 6.7 );
 }
 
 #endif
