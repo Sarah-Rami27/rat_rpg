@@ -9,6 +9,7 @@ class ExtraHit: public WeaponDecorator {
         ExtraHit(Weapon*, int);
         ~ExtraHit();
         double calculateDamage(double, double);
+        void printStats(std::ostream&);
 };
 
 #endif
