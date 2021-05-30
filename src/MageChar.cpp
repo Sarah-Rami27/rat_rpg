@@ -43,7 +43,11 @@ void MageChar::reduceDefense() {
 void MageChar::reduceHealth(double damage) {
     if(this->def < damage){
         this->curHp = this->curHp - (damage - this->def);
-    	cout << "You took " << "\033[;31m" << damage << "\033[0m" << " damage, ouch." << endl;	
+    	cout << "You took " << "\033[;31m" << (damage - this->def) << "\033[0m" << " damage, ouch." << endl;	
+	if(curHp <= 0) { 
+		cout << "Your rat legend ends here, you have died hero." << endl; 
+		return;
+	}
 	cout << "You have " << "\033[;32m" << this->curHp << "\033[0m" << " of " << "\033[;32m" << this->maxHp << "\033[0m" << " health remaining!" << endl;
     }
     else { cout << "Your defense was too high to take damage! Ratthew, the Gym Rat would be proud." << endl; } 
@@ -52,14 +56,17 @@ void MageChar::reduceHealth(double damage) {
 void MageChar::increaseHealth(double heal) {
     if (heal == 0.00) {
 	cout << "Your health bar is just as disappointed as Django..." << endl;
+       cout << "You have " << "\033[;32m" << this->curHp << "\033[0m" << " of " << "\033[;32m" << this->maxHp << "\033[0m" << " health remaining!" << endl;
     }
     else if ((this->curHp + heal) >= this->maxHp) {
 	this->curHp = this->maxHp;
 	cout << "You fully heal! Rattacular!" << endl;
+       cout << "You have " << "\033[;32m" << this->curHp << "\033[0m" << " of " << "\033[;32m" << this->maxHp << "\033[0m" << " health remaining!" << endl;
     }
     else {
 	this->curHp += heal;
 	cout << "You heal for " << "\033[;32m" << heal << "\033[0m" << " health!" << endl;
+	cout << "You have " << "\033[;32m" << this->curHp << "\033[0m" << " of " << "\033[;32m" << this->maxHp << "\033[0m" << " health remaining!" << endl;
     }
 }
 
