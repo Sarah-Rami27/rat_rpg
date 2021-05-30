@@ -23,7 +23,7 @@ TEST(MageChar, mageAttack){
     Character* mage = new MageChar();
     Enemy* enemy = new Enemy(0);
     mage->attack(enemy);
-    EXPECT_EQ(enemy->getHp(), 9.0);
+    EXPECT_TRUE(0 <= enemy->getHp() <= 1);
 }
 TEST(MageChar, mageDefend){
     Character* mage = new MageChar();
@@ -54,7 +54,7 @@ TEST(WarriorChar, WarrAttack){
     Character* test = new WarriorChar();
     Enemy* enemy = new Enemy(0);
     test->attack(enemy);
-    EXPECT_EQ(enemy->getHp(), 9.0);
+    EXPECT_TRUE(4 <= enemy->getHp() <= 5);
 }
 TEST(WarriorChar, WarrDefend){
     Character* test = new WarriorChar();
