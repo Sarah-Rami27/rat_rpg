@@ -35,7 +35,7 @@ int main() {
 void displayCharacterOptions() {
     cout << "Pick your Rat Hero! (choose a number)" << endl;
     cout << "1) Remy The Warrior" << endl;
-    cout << "2) Emille The Mage" << endl;
+    cout << "2) Emile The Mage" << endl;
     cout << "Input: ";
 }
 
