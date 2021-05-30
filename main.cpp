@@ -16,10 +16,18 @@ int main() {
     displayTitle();
     displayCharacterOptions(); 
     cin >> userInput;
+    if(cin.fail()) {
+	cin.clear();
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    }
 
     while(userInput != 1 && userInput != 2){
-        cout << "Please enter a valid choice" << endl;
+        cout << "Please enter a valid choice: ";
         cin >> userInput;
+    	if(cin.fail()) {
+    	    cin.clear();
+    	    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    	}
     } 
     
     cout << endl;
