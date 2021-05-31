@@ -11,6 +11,8 @@ Game::Game() {
     player = nullptr;
     levelNum = 1; 
     enemy = nullptr;
+    telegraph = false;
+    smashed = false;
 }
 
 Game::~Game() {
@@ -20,7 +22,7 @@ Game::~Game() {
 }
 
 bool Game::isAlive(){
-    if(player->getCurHp() <= 0){
+    if((player->getCurHp() <= 0) || smashed){
         return false;
     }
     return true;
@@ -150,9 +152,16 @@ void Game::spawnLoot() {
 
 void Game::startCombat() {
     spawnEnemy();
-
-    while(player->getCurHp() > 0 && enemy->getHp() > 0){
+    while(player->getCurHp() > 0 && enemy->getHp() > 0 && !smashed){
         int userInput;
+	
+	if(rng.roll(1,5)) { //head on attack!
+    		cout << endl;
+		cout << "\e[1;31mSkinner is preparing a head on smash!!!...\e[0m";
+		telegraph = true;
+		cout << endl;;
+	}
+	
         displayOptions();                                   //1) attack 2)defend
         cin >> userInput;
 	if(cin.fail()) {
@@ -168,7 +177,7 @@ void Game::startCombat() {
 		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	    }
         }
-
+	
         if(userInput == 1){
             player->attack(enemy);                              //player attacks first
 
@@ -178,6 +187,7 @@ void Game::startCombat() {
                     spawnLoot();   
                 }
                 delete this->enemy;
+		telegraph = false;
                 ++levelNum;
                 return;
             }
@@ -188,7 +198,24 @@ void Game::startCombat() {
         }
 
         if(enemy->getHp() > 0){                             
-            enemy->attack(player);                          //enemy attacks player
+            if(telegraph && userInput != 2) {
+		cout << "\e[1;31mSkinner ended you instantly! Perhaps you'll defend in another life...\e[0m" << endl;	
+		cout<<R"(
+        ,-=-.       
+       /  +  \     
+       | ~~~ |    
+       |R.I.P|      
+,v,VvV,|_____|V,vV,v
+)";
+		smashed = true;
+		return;	
+	    }
+	    else if(telegraph && userInput == 2) {
+		cout << "Your preperation payed off, you defended the attack! 0 damage taken." << endl;
+	    }
+	    else {
+            	enemy->attack(player);                          //enemy attacks player
+	    }
             if (player->getCurHp() <= 0) {
 		cout << endl;
 		cout<<R"(
@@ -201,6 +228,7 @@ void Game::startCombat() {
 		cout << endl;
                 return;                                     //enemy wins
             }
+	    telegraph = false;
         }
 
         if(userInput == 2) {
