@@ -11,6 +11,7 @@ class Armor {
         double def; 
 
     public:
+		virtual ~Armor() {}
         virtual double getDef() = 0; 
         virtual void printStats(std::ostream& out) {
             out << "Def: " << def << endl; 
