@@ -6,9 +6,9 @@
 MageChar::MageChar() {
     this->name = "Emile The Rat";
     this->atk = 8; 
-    this->def = 2;
-    this->curHp = 16; 
-    this->maxHp = 16;
+    this->def = 3;
+    this->curHp = 15; 
+    this->maxHp = 15;
     this->currWeapon = new MageWeapon();
     this->currArmor = new MageArmor();
 }

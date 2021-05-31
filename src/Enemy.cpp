@@ -16,9 +16,9 @@ Enemy::Enemy(int levelNum) {
  *  Current equation: (#/2.0) + 10.0
  */
    this->name = "Chef Skinner " + to_string(levelNum);
-   this->hp = (levelNum / 2.0) + 10.0;
-   this->atk = (levelNum / 2.0) + 2.0;
-   this->def = (levelNum / 2.0);
+   this->hp = (pow(levelNum, 1.3) / 1.6) + 5.0;
+   this->atk = (levelNum / 1.5) + 2.0;
+   this->def = (levelNum / 1.2);
 }
 
 string Enemy::getName() const { return this->name; }
