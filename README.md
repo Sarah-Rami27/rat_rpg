@@ -81,7 +81,6 @@ In addition, the Weapon class utilizes the Decorator design pattern to allow us 
   ```
  To replay the game use the last command! Enjoy!
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
  ![VALGRIND](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/master/Screenshots/valgrind.png)
  ![TESTS](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/master/Screenshots/tests.png)
