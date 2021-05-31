@@ -80,5 +80,5 @@ In addition, the Weapon class utilizes the Decorator design pattern to allow us 
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
- <br /> This project was validated through Valgrind with 0 memory leaks. Unit tests were done on every class and were all passing. Integrated testing was also performed to test interactions between classes.
+ <br /> This project was validated through Valgrind with 0 memory leaks. Unit tests were done on every class and were all passing. Integrated testing was also performed to test interactions between classes. Around 5 hours of collective play testing was also done to help adjust the in-game numbers and text issues. 
  
