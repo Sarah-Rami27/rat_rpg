@@ -22,6 +22,7 @@ class Character {
         Armor* currArmor;
 
     public:
+		virtual ~Character() {}
         virtual void attack(Enemy*) = 0; 
         virtual void defend() = 0; 
         virtual void reduceDefense() = 0; 

@@ -8,6 +8,7 @@
 class ClassTypeFactory {
  
     public:
+		virtual ~ClassTypeFactory() {}
         virtual Character* createCharacter() = 0; 
         virtual Weapon* createWeapon(int) = 0; 
         virtual Armor* createArmor(int) = 0; 
