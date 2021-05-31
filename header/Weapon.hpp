@@ -13,6 +13,7 @@ class Weapon {
         RNG rng;
 
     public:
+		virtual ~Weapon() {}
         virtual double calculateDamage(double, double) = 0;     //passes in the character's atk and Enemy's def
         virtual void printStats(std::ostream& out) {
             out << "Damage Range: " << minDamage << " - " << maxDamage << endl;
