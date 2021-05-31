@@ -43,9 +43,42 @@ In addition, the Weapon class utilizes the Decorator design pattern to allow us 
  > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+ ![TITLE](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/master/Screenshots/title.png)
+ <br /> Screenshot of the Title/Prologue
+ 
+ ![INVALID](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/master/Screenshots/invalidInput.png)
+ <br /> Screenshot of Invalid Input
+ 
+ ![COMBAT](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/master/Screenshots/combatHealth.png)
+ <br /> Screenshot of Hp Displays during combat
+ 
+ ![WEAPONDROP](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/master/Screenshots/WeaponDropComparison.png)
+ <br /> Screenshot of a weapon dropping, player is comparing the stats (shows perks)
+ 
+ ![SPECIAL](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/master/Screenshots/unblockedSpecial.png)
+ <br /> Screenshot of player dying to a special attack
+ 
+ ![SPECIALU](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/master/Screenshots/blockedSpecial.png)
+ <br /> Screenshot of player blocking special and living
+ 
  ## Installation/Usage
- > Instructions on installing and running your application
+ <br /> On this top right of this page, press the green download code button.
+ <br /> Press on the clipboard next to HTTPS link
+ <br /> Headover to your terminal and input the following lines after each one runs successfully:
+  ```
+  git clone --recursive <COPIED HTTPS URL>
+  
+  cd final-project-nteng004_srami109_mdong016
+  
+  cmake3 .
+  
+  make
+  
+  ./game
+  ```
+ To replay the game use the last command! Enjoy!
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ 
+ <br /> This project was validated through Valgrind with 0 memory leaks. Unit tests were done on every class and were all passing. Integrated testing was also performed to test interactions between classes.
  
