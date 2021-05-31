@@ -6,6 +6,7 @@
 #include "MageFactory.h"
 #include "Enemy.h"
 #include "Loot.h"
+#include <limits>
 
 class Game {
     private: 

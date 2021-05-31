@@ -16,10 +16,18 @@ int main() {
     displayTitle();
     displayCharacterOptions(); 
     cin >> userInput;
+    if(cin.fail()) {
+	cin.clear();
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    }
 
     while(userInput != 1 && userInput != 2){
-        cout << "Please enter a valid choice" << endl;
+        cout << "Please enter a valid choice: ";
         cin >> userInput;
+    	if(cin.fail()) {
+    	    cin.clear();
+    	    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    	}
     } 
     
     cout << endl;
@@ -35,7 +43,7 @@ int main() {
 void displayCharacterOptions() {
     cout << "Pick your Rat Hero! (choose a number)" << endl;
     cout << "1) Remy The Warrior" << endl;
-    cout << "2) Emille The Mage" << endl;
+    cout << "2) Emile The Mage" << endl;
     cout << "Input: ";
 }
 

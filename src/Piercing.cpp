@@ -5,7 +5,7 @@
 
 Piercing::Piercing(Weapon* weapon, int levelNum): WeaponDecorator(weapon, levelNum){
     RNG rng;
-    piercing = rng.pickDouble(.03 * (levelNum + 1), .06 * (levelNum + 1));
+    piercing = rng.pickDouble(0.005, 0.01);
     if(piercing > 1.0) { 
         piercing = 1.0;
     }

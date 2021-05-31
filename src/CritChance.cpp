@@ -5,7 +5,7 @@
 
 CritChance::CritChance(Weapon* weapon, int levelNum): WeaponDecorator(weapon, levelNum) {
     while (levelNum > 0) {
-        critChance += rng.pickDouble(0.02, 0.04);
+        critChance += rng.pickDouble(0.005, 0.01);
         levelNum--; 
     }
 }

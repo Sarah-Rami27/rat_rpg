@@ -63,21 +63,23 @@ void Game::spawnLoot() {
     Weapon* newWeapon = loot.spawnWeapon(levelNum, factory); 
     cout << "You found a new weapon!" << endl;
     std::string weaponPrompt = "Do you want to replace your current weapon?\n1) Yes\n2) No\n3) Compare stats\nInput: ";
+    cout << weaponPrompt; 
     
     while (true) {
-        cout << weaponPrompt; 
         cin >> playerInput; 
-        cout << endl;
         if (playerInput == 1) {
             delete player->getCurrWeapon();
             player->setCurrWeapon(newWeapon);
+	    cout << endl;
             cout << "You take the new weapon." << endl;
         }
         else if (playerInput == 2) {
             delete newWeapon; 
+	    cout << endl;
             cout << "You leave the new weapon." << endl;
         }
         else if (playerInput == 3) {
+	    cout << endl;
             cout << "NEW WEAPON STATS" << endl; 
             cout << "================" << endl;
             newWeapon->printStats(cout);
@@ -86,34 +88,41 @@ void Game::spawnLoot() {
             cout << "====================" << endl;
             player->getCurrWeapon()->printStats(cout);
             cout << endl;
+            cout << weaponPrompt; 
             continue; 
         }
         else {
-            cout << "Enter a valid input: " << endl;
+            cout << "Enter a valid input: ";
+	    if(cin.fail()) {
+	        cin.clear();
+	        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	    }
             continue;
         }
-        cout << endl;
         break;
     }
-    
+    cout << endl;    
+ 
     Armor* newArmor = loot.spawnArmor(levelNum, factory);
     cout << "You found new armor!" << endl;
     std::string armorPrompt = "Do you want to replace your current armor?\n1) Yes\n2) No\n3) Compare stats\nInput: ";
+    cout << armorPrompt; 
     
     while (true) {
-        cout << armorPrompt; 
         cin >> playerInput; 
-        cout << endl;
         if (playerInput == 1) {
             delete player->getCurrArmor();
             player->setCurrArmor(newArmor);
+	    cout << endl;
             cout << "You take the new armor." << endl;
         }
         else if (playerInput == 2) {
             delete newArmor; 
+	    cout << endl;
             cout << "You leave the new armor." << endl;
         }
         else if (playerInput == 3) {
+	    cout << endl;
             cout << "NEW ARMOR STATS" << endl;
             cout << "===============" << endl; 
             newArmor->printStats(cout); 
@@ -122,15 +131,20 @@ void Game::spawnLoot() {
             cout << "===================" << endl;
             player->getCurrArmor()->printStats(cout);
             cout << endl;
+            cout << armorPrompt; 
             continue; 
         }
         else {
-            cout << "Enter a valid input: " << endl;
+            cout << "Enter a valid input: ";
+	    if(cin.fail()) {
+	        cin.clear();
+	        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	    }
             continue;
         }
-        cout << endl;
         break;
     }
+    cout << endl;
 
     player->increaseHealth(player->getMaxHp() * loot.spawnFood());
     cout << endl;
@@ -150,10 +164,18 @@ void Game::startCombat() {
 	
         displayOptions();                                   //1) attack 2)defend
         cin >> userInput;
+	if(cin.fail()) {
+		cin.clear();
+		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	}
 
         while(userInput != 1 && userInput != 2){
-            cout << "Please enter a valid choice" << endl;
+            cout << "Please enter a valid choice: ";
             cin >> userInput;
+	    if(cin.fail()) {
+		cin.clear();
+		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	    }
         }
 	
         if(userInput == 1){
@@ -195,6 +217,15 @@ void Game::startCombat() {
             	enemy->attack(player);                          //enemy attacks player
 	    }
             if (player->getCurHp() <= 0) {
+		cout << endl;
+		cout<<R"(
+        ,-=-.       
+       /  +  \     
+       | ~~~ |    
+       |R.I.P|      
+,v,VvV,|_____|V,vV,v
+        )";
+		cout << endl;
                 return;                                     //enemy wins
             }
 	    telegraph = false;
