@@ -12,7 +12,7 @@ void displayTitle();
 int main() {
     srand(time(NULL)); //for Rng class functions
     int userInput; 
-    Game game;
+    Game* game = new Game();
     displayTitle();
     displayCharacterOptions(); 
     cin >> userInput;
@@ -31,12 +31,12 @@ int main() {
     } 
     
     cout << endl;
-    game.setFactory(userInput);
-    game.createPlayer();
-    while(game.isAlive()){
-        game.startCombat(); 
+    game->setFactory(userInput);
+    game->createPlayer();
+    while(game->isAlive()){
+        game->startCombat(); 
     }
-
+	delete game;
     return 0;
 }
 
