@@ -37,6 +37,7 @@ int main() {
 
     game->setFactory(userInput);
     game->createPlayer();
+    preMsg();
     while(game->isAlive()){
         game->startCombat(); 
     }
