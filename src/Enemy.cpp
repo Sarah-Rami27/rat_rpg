@@ -3,6 +3,7 @@
 
 #include "../header/Enemy.h"
 #include <iostream>
+#include <iomanip>
 
 Enemy::Enemy() {
    this->name = "Generic";
@@ -42,12 +43,12 @@ void Enemy::reduceHealth(double damage) {
    else {
       this->hp -= damageTaken; 
       if (this->hp <= 0) {
-         cout << endl << this->name + " took " << "\033[;31m" << damageTaken << "\033[0m" << " damage!" << endl;
+         cout << endl << this->name + " took " << "\033[;31m" << std::fixed << std::setprecision(2) << damageTaken << "\033[0m" << " damage!" << endl;
          cout << this->name + " died!" << endl;
       }
       else {
 	 cout << endl;
-         cout << this->name + " took " << "\033[;31m" << damageTaken << "\033[0m" << " damage!" << endl;
+         cout << this->name + " took " << "\033[;31m" << std::fixed << std::setprecision(2) << damageTaken << "\033[0m" << " damage!" << endl;
          cout << this->name + " has " << "\033[1;35m" << this->hp << "\033[0m" << " health remaining." << endl;
 	 cout << endl;
       }
