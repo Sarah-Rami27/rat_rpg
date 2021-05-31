@@ -61,6 +61,9 @@ In addition, the Weapon class utilizes the Decorator design pattern to allow us 
  ![SPECIALU](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/master/Screenshots/blockedSpecial.png)
  <br /> Screenshot of player blocking special and living
  
+ ![FOOD](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/master/Screenshots/food.png)
+ <br /> Screenshot of food dropping!
+ 
  ## Installation/Usage
  <br /> On this top right of this page, press the green download code button.
  <br /> Press on the clipboard next to HTTPS link
