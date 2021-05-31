@@ -20,7 +20,7 @@ double Piercing::calculateDamage(double playerAtk, double enemyDef){
 }
 
 void Piercing::printStats(std::ostream& out) {
-    cout << "Piercing: " << (piercing * 100) << "%" << endl;
+    out << "P: " << (piercing * 100) << " ";
     WeaponDecorator::printStats(out); 
 }
 

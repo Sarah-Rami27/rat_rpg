@@ -23,7 +23,7 @@ double CritChance::calculateDamage(double playerAtk, double enemyDef) {
 }
 
 void CritChance::printStats(std::ostream& out) {
-    cout << "Crit Chance: " << (critChance * 100) << "%" << endl;
+    out << "CC: " << (critChance * 100) << " ";
     WeaponDecorator::printStats(out);
 }
 
