@@ -83,5 +83,5 @@ In addition, the Weapon class utilizes the Decorator design pattern to allow us 
  ![VALGRIND](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/master/Screenshots/valgrind.png)
  ![TESTS](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/master/Screenshots/tests.png)
  
- <br /> This project was validated through Valgrind with 0 memory leaks. Unit tests were done on every class and were all passing. Integrated testing was also performed to test interactions between classes. Around 5 hours of collective play testing was also done to help adjust the in-game numbers and text issues. 
+ <br /> This project was validated through Valgrind with 0 memory leaks. Unit tests were done on every class and were all passing. Integrated testing was also performed to test interactions between classes. 
  
