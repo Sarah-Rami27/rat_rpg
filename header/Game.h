@@ -27,6 +27,7 @@ class Game {
         void spawnEnemy(); 
         void spawnLoot();
         void startCombat(); 
+        void parseWeaponOutput(std::ostream&, Weapon*); 
 };
 
 #endif
