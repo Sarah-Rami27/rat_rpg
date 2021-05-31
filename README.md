@@ -19,7 +19,7 @@
  
  ### Inputs/Outputs
   #### Inputs: 
-   The user will be able to make choices as they progress throughout the game. This will be in the form of combat decisions, accessing/using items from inventory,   and choosing whether or not to equip new items.  
+   The user will be able to make choices as they progress throughout the game. This will be in the form of combat decisions and choosing whether or not to equip new items.  
   #### Outputs: 
    The program will output to text the console. This text will be in the form of prompts, room/enemy description, combat options, etc.  
  
