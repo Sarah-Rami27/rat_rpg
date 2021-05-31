@@ -50,7 +50,7 @@ void WarriorChar::reduceHealth(double damage) {
        this->curHp = this->curHp - (damage - this->def);
        cout << "You took " << "\033[;31m" << std::fixed << std::setprecision(2) << (damage - this->def) << "\033[0m" << " damage, ouch." << endl;	
 	if(curHp <= 0) { 
-		cout << "Your rat legend ends here, you have died hero." << endl; 
+		cout << "\e[1m\n\nYour rat legend ends here, you have died hero.\e[0m" << endl; 
 		return;
 	}
        cout << "You have " << "\033[;32m" << std::fixed << std::setprecision(2) << this->curHp << "\033[0m" << " of " << "\033[;32m" << this->maxHp << "\033[0m" << " health remaining!" << endl;
