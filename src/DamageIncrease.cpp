@@ -17,7 +17,7 @@ double DamageIncrease::calculateDamage(double playerAtk, double enemyDef) {
 }
 
 void DamageIncrease::printStats(std::ostream& out) {
-    cout << "Extra Damage: " << extraDamage << endl;
+    out << "ED: " << extraDamage << " ";
     WeaponDecorator::printStats(out);
 }
 #endif

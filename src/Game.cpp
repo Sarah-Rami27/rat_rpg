@@ -3,6 +3,7 @@
 
 #include "../header/Game.h"
 #include <iostream>
+#include <sstream>
 
 using namespace std;
 
@@ -82,11 +83,11 @@ void Game::spawnLoot() {
 	    cout << endl;
             cout << "NEW WEAPON STATS" << endl; 
             cout << "================" << endl;
-            newWeapon->printStats(cout);
+            parseWeaponOutput(cout, newWeapon);
             cout << endl; 
             cout << "CURRENT WEAPON STATS" << endl; 
             cout << "====================" << endl;
-            player->getCurrWeapon()->printStats(cout);
+            parseWeaponOutput(cout, player->getCurrWeapon());
             cout << endl;
             cout << weaponPrompt; 
             continue; 
@@ -154,14 +155,12 @@ void Game::startCombat() {
     spawnEnemy();
     while(player->getCurHp() > 0 && enemy->getHp() > 0 && !smashed){
         int userInput;
-	
 	if(rng.roll(1,5)) { //head on attack!
     		cout << endl;
 		cout << "\e[1;31mSkinner is preparing a head on smash!!!...\e[0m";
 		telegraph = true;
 		cout << endl;;
 	}
-	
         displayOptions();                                   //1) attack 2)defend
         cin >> userInput;
 	if(cin.fail()) {
@@ -264,5 +263,61 @@ Vv.\/V.v./,v.V..v,VvV,|_v_V_|V,vV,v/V..vV../\V..Vv,,vV
     }
 }
 
+void Game::parseWeaponOutput(std::ostream& out, Weapon* weapon) {
+    std::stringstream ss; 
+    std::string temp;
+    double numString;  
+    double ed = 0.0; 
+    int cc = 0;
+    int p = 0;
+    int eh = 0;
+    double minDmg = 0.0; 
+    double maxDmg = 0.0;
+
+    weapon->printStats(ss);
+    while(!ss.eof()) {
+        ss >> temp; 
+        if (temp == "ED:") {
+            ss >> numString;
+            ed += numString;
+        }
+        else if (temp == "CC:") {
+            ss >> numString; 
+            cc += numString;
+        }
+        else if (temp == "P:") {
+            ss >> numString; 
+            p += numString;
+        }
+        else if (temp == "EH:") {
+            ss >> numString; 
+            eh += numString;
+        }
+        else if (temp == "DR:") {
+            ss >> minDmg;
+            ss >> maxDmg; 
+        }
+    }
+
+    if (ed > 0) {
+        out << "Extra Damage: " << ed << endl; 
+    }
+    if (cc > 0) {
+        out << "Crit Chance: " << cc << "%" << endl; 
+    }
+    if (p > 0) {
+        out << "Piercing: " << p << "%" << endl; 
+    }
+    if (eh > 0) {
+        if (eh == 1) {
+            out << "Extra Hit: " << eh << endl; 
+        }
+        else {
+            out << "Extra Hits: " << eh << endl; 
+        }
+        
+    }
+    out << "Damage Range: " << minDmg << " - " << maxDmg << endl;
+}
 
 #endif 

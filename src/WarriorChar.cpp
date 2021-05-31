@@ -10,8 +10,8 @@ WarriorChar::WarriorChar() {
     this->name = "Remy The Rat";
     this->atk = 6; 
     this->def = 5;
-    this->curHp = 20;
-    this->maxHp = 20;
+    this->curHp = 40;
+    this->maxHp = 40;
     this->currWeapon = new WarriorWeapon();
     this->currArmor = new WarriorArmor();
 }

@@ -12,7 +12,7 @@ double ExtraHit::calculateDamage(double playerAttack, double enemyDef){
 }
 
 void ExtraHit::printStats(std::ostream& out) {
-    cout << "Extra Hits: 1" << endl;
+    out << "EH: 1" << " ";
     WeaponDecorator::printStats(out);
 }
 
