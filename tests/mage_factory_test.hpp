@@ -10,7 +10,7 @@ TEST(MageFactoryTest, CreateCharacter) {
 
     ClassTypeFactory* test = new MageFactory(); 
     Character* player = test->createCharacter();
-    std::string stats = "Name: Emile The Rat\nAtk: 8\nDef: 3\nHp: 15/15\n"; 
+    std::string stats = "Name: Emile The Rat\nAtk: 8\nDef: 3\nHp: 35/35\n"; 
     player->printStats(ss); 
     EXPECT_EQ(ss.str(), stats);
 }
@@ -30,7 +30,7 @@ TEST(MageFactoryTest, CreateWeapon) {
 
     ClassTypeFactory* test = new MageFactory(); 
     Weapon* weapon = test->createWeapon(0);
-    std::string stats = "Damage Range: 4 - 6\n";
+    std::string stats = "DR: 4 6\n";
     weapon->printStats(ss);
     EXPECT_EQ(ss.str(), stats);
 }

@@ -38,15 +38,15 @@ TEST(MageChar, mageReduceDef){
 TEST(MageChar, mageHealth){
     Character* mage = new MageChar();
     mage->reduceHealth(5);
-    EXPECT_EQ(mage->getCurHp(),13 );
+    EXPECT_EQ(mage->getCurHp(),33 );
 }
 
 TEST(MageChar, mageIncHealth){
     Character* mage = new MageChar();
-    EXPECT_EQ(mage->getCurHp(), 15);
+    EXPECT_EQ(mage->getCurHp(), 35);
     mage->reduceHealth(5);
     mage->increaseHealth(2);
-    EXPECT_EQ(mage->getCurHp(), 15);
+    EXPECT_EQ(mage->getCurHp(), 35);
 }
 
 /* Warrior Tests*/
@@ -69,15 +69,15 @@ TEST(WarriorChar, WarrReduceDef){
 TEST(WarriorChar, WarrHealth){
     Character* test = new WarriorChar();
     test->reduceHealth(15);
-    EXPECT_EQ(test->getCurHp(), 10);
+    EXPECT_EQ(test->getCurHp(), 30);
 }
 
 TEST(WarriorChar, WarrIncHealth){
     Character* test = new WarriorChar();
-    EXPECT_EQ(test->getCurHp(), 20);
+    EXPECT_EQ(test->getCurHp(), 40);
     test->reduceHealth(15);
     test->increaseHealth(2);
-    EXPECT_EQ(test->getCurHp(), 12);
+    EXPECT_EQ(test->getCurHp(), 32);
 }
 
 

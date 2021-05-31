@@ -45,7 +45,7 @@ TEST(GameTest, isAliveFalseW){
     Game testGame;
     testGame.setFactory(1);
     testGame.createPlayer();
-    testGame.player->reduceHealth(30);
+    testGame.player->reduceHealth(45);
     EXPECT_FALSE(testGame.isAlive());
 }
 
@@ -53,7 +53,7 @@ TEST(GameTest, isAliveFalseM){
     Game testGame;
     testGame.setFactory(2);
     testGame.createPlayer();
-    testGame.player->reduceHealth(18);
+    testGame.player->reduceHealth(45);
     EXPECT_FALSE(testGame.isAlive());
 }
 #endif //_GAME_TEST_HPP_

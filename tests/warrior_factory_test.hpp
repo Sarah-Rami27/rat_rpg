@@ -10,7 +10,7 @@ TEST(WarriorFactoryTest, CreateCharacter) {
 
     ClassTypeFactory* test = new WarriorFactory(); 
     Character* player = test->createCharacter();
-    std::string stats = "Name: Remy The Rat\nAtk: 6\nDef: 5\nHp: 20/20\n"; 
+    std::string stats = "Name: Remy The Rat\nAtk: 6\nDef: 5\nHp: 40/40\n"; 
     player->printStats(ss); 
     EXPECT_EQ(ss.str(), stats);
 }
@@ -30,7 +30,7 @@ TEST(WarriorFactoryTest, CreateWeapon) {
 
     ClassTypeFactory* test = new WarriorFactory(); 
     Weapon* weapon = test->createWeapon(1);
-    std::string stats = "Damage Range: 1.5 - 3.55556\n";
+    std::string stats = "DR: 1.5 3.55556\n";
     weapon->printStats(ss);
     EXPECT_EQ(ss.str(), stats);
 }
