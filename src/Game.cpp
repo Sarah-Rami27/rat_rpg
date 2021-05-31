@@ -200,13 +200,13 @@ void Game::startCombat() {
         if(enemy->getHp() > 0){                             
             if(telegraph && userInput != 2) {
 		cout << "\e[1;31mSkinner ended you instantly! Perhaps you'll defend in another life...\e[0m" << endl;	
-		cout << endl;
-		cout << " ,-=-. " << endl;
-		cout << "/  +  \\" << endl;
-		cout << "| ~~~ |" << endl;
-		cout << "|R.I.P|" << endl;
-		cout << "|_____|" << endl;
-		cout << endl;
+		cout<<R"(
+        ,-=-.       
+       /  +  \     
+       | ~~~ |    
+       |R.I.P|      
+,v,VvV,|_____|V,vV,v
+)";
 		smashed = true;
 		return;	
 	    }
