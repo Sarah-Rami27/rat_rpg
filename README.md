@@ -3,12 +3,12 @@
 Authors: [Michael Dong](https://github.com/toothnnail), [Sarah Ramirez](https://github.com/Sarah-Rami27), [Nicholas Tengbumroong](https://github.com/nicholastengbumroong)
 
 ### General Description:
->  
+  
 Rat. is an infinite RPG rogue like in which you embark as one of two classes. You encounter enemies on each floor and have turn based combat. The enemy can occasionally send out a telegraphed attack in which the player must respond accordingly. Players utilize loot they obtain as the progress to clear the game. This loot includes weapons, armor, and food. All of which are scaled to the current level to make sure the player stays relevant through the game. The weapons have a rare chance to contains perks that enhance combat such as boosted critical strike chance or an extra hit. Players will be able to choose whether or not they pick up the gear drops. The game continues to generate new enemies until the player's health hits 0 or they fail to dodge a special attack.
-> 
+ 
 ### Why is it important?
 Two of our common interests are games and Disney Pixar's "Ratatouille". We wanted to try creating a game ourselves, adding our own flavor to it. We were curious about what goes behind the design of games such as character types and dungeon generation, so we decided to base our project around a rougelike rpg game that would implement these aspects. 
-> 
+
 ### Language/Tools/Technologies
 * [C++](https://www.cplusplus.com/) - Progamming language
 * [Git](https://git-scm.com/) - Version control system 
