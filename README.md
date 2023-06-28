@@ -35,25 +35,25 @@ The CharacterFactory class is an implemenation of the Abstract Factory design pa
 In addition, the Weapon class utilizes the Decorator design pattern to allow us to change certain attributes of any given weapon object. So while the weapon can either be a Warrior weapon or a Mage weapon, we also have the ability to apply perks (decorations) to these objects. The WeaponDecorator class extends the abstract Weapon class and then is extended by several differnt perk classes. Each of these classes modify a specific attribute of the weapon. 
  
  ## Screenshots
- ![TITLE](https://github.com/Sarah-Rami27/rat_rpg_game/blob/gh-pages/Screenshots/title.png)
+ ![TITLE](/Screenshots/title.png)
  <br /> Screenshot of the Title/Prologue
  
- ![INVALID](https://github.com/Sarah-Rami27/rat_rpg_game/blob/gh-pages/Screenshots/invalidInput.png)
+ ![INVALID](/Screenshots/invalidInput.png)
  <br /> Screenshot of Invalid Input
  
- ![COMBAT](https://github.com/Sarah-Rami27/rat_rpg_game/blob/gh-pages/Screenshots/combatHealth.png)
+ ![COMBAT](/Screenshots/combatHealth.png)
  <br /> Screenshot of Hp Displays during combat
  
- ![WEAPONDROP](https://github.com/Sarah-Rami27/rat_rpg_game/blob/gh-pages/Screenshots/WeaponDropComparison.png)
+ ![WEAPONDROP](/Screenshots/WeaponDropComparison.png)
  <br /> Screenshot of a weapon dropping, player is comparing the stats (shows perks)
  
- ![SPECIAL](https://github.com/Sarah-Rami27/rat_rpg_game/blob/gh-pages/Screenshots/unblockedSpecial.png)
+ ![SPECIAL](/Screenshots/unblockedSpecial.png)
  <br /> Screenshot of player dying to a special attack
  
- ![SPECIALU](https://github.com/Sarah-Rami27/rat_rpg_game/blob/gh-pages/Screenshots/blockedSpecial.png)
+ ![SPECIALU](/Screenshots/blockedSpecial.png)
  <br /> Screenshot of player blocking special and living
  
- ![FOOD](https://github.com/Sarah-Rami27/rat_rpg_game/blob/gh-pages/Screenshots/food.png)
+ ![FOOD](/Screenshots/food.png)
  <br /> Screenshot of food dropping!
  
  ## Installation/Usage
