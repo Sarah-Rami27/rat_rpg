@@ -17,13 +17,13 @@ Two of our common interests are games and Disney Pixar's "Ratatouille". We wante
 * [CMake](https://cmake.org/) - Software for building code into an executable we can run. 
 * [Google Test Framework](https://github.com/google/googletest) - A collection of tests that we use to unit test our code. 
 
-### Inputs/Outputs <br/>
+### Inputs/Outputs 
 #### Inputs: 
   The user will be able to make choices as they progress throughout the game. This will be in the form of combat decisions and choosing whether or not to equip new items.  
 #### Outputs: 
   The program will output to text the console. This text will be in the form of prompts, room/enemy description, combat options, etc.  
 
-### Design Patterns <br/>
+### Design Patterns 
 #### Decorator: 
 The decorator design pattern will serve as the basis for our perk system. It will let us attach perks to the player character's equipment as they progress through the game. These perks will be able to stack and have interactions with each other and at any point in the game the character will be able to have multiple perks on them. They will be added or removed depending on actions in the game. We anticpate having issues with modifying the behavior of the player's equipment after the object has already been created. The decorator class allows us to wrap the equipment objects with perks that will alter the behavior or stats of the item.
 #### Abstract Factory:
