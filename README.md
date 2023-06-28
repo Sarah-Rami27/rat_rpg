@@ -30,30 +30,30 @@
   The abstract factory design pattern allows us to have a base character class. This would have multiple playable character variants that the user will be able to choose at the beginning of the game (e.g. fighter/rogue/etc.). We anticipate having issues with maintaining/organizing several distinct character types. Using the abstract factory design pattern lets us have a single basic character interface that will then be implemented by the different character types. Each character type will have their different associated weapons and armor.
  
 ### Class Diagram
-![OMT Diagram](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/gh-pages/DesignDocuments/OmtV6.png)
+![OMT Diagram](https://github.com/Sarah-Rami27/rat_rpg_game/blob/gh-pages/DesignDocuments/OmtV6.png)
 The CharacterFactory class is an implemenation of the Abstract Factory design pattern. It is the interface that the concrete classes, WarriorFactory and MageFactory implement. These two concrete factories will each produce their own version of a Character object. The same applies to both the armor and weapon classes. This allows us to have an associated family of objects within their respective types, such as Warrior or Mage.
 In addition, the Weapon class utilizes the Decorator design pattern to allow us to change certain attributes of any given weapon object. So while the weapon can either be a Warrior weapon or a Mage weapon, we also have the ability to apply perks (decorations) to these objects. The WeaponDecorator class extends the abstract Weapon class and then is extended by several differnt perk classes. Each of these classes modify a specific attribute of the weapon. 
  
  ## Screenshots
- ![TITLE](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/gh-pages/Screenshots/title.png)
+ ![TITLE](https://github.com/Sarah-Rami27/rat_rpg_game/blob/gh-pages/Screenshots/title.png)
  <br /> Screenshot of the Title/Prologue
  
- ![INVALID](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/gh-pages/Screenshots/invalidInput.png)
+ ![INVALID](https://github.com/Sarah-Rami27/rat_rpg_game/blob/gh-pages/Screenshots/invalidInput.png)
  <br /> Screenshot of Invalid Input
  
- ![COMBAT](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/gh-pages/Screenshots/combatHealth.png)
+ ![COMBAT](https://github.com/Sarah-Rami27/rat_rpg_game/blob/gh-pages/Screenshots/combatHealth.png)
  <br /> Screenshot of Hp Displays during combat
  
- ![WEAPONDROP](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/gh-pages/Screenshots/WeaponDropComparison.png)
+ ![WEAPONDROP](https://github.com/Sarah-Rami27/rat_rpg_game/blob/gh-pages/Screenshots/WeaponDropComparison.png)
  <br /> Screenshot of a weapon dropping, player is comparing the stats (shows perks)
  
- ![SPECIAL](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/gh-pages/Screenshots/unblockedSpecial.png)
+ ![SPECIAL](https://github.com/Sarah-Rami27/rat_rpg_game/blob/gh-pages/Screenshots/unblockedSpecial.png)
  <br /> Screenshot of player dying to a special attack
  
- ![SPECIALU](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/gh-pages/Screenshots/blockedSpecial.png)
+ ![SPECIALU](https://github.com/Sarah-Rami27/rat_rpg_game/blob/gh-pages/Screenshots/blockedSpecial.png)
  <br /> Screenshot of player blocking special and living
  
- ![FOOD](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/gh-pages/Screenshots/food.png)
+ ![FOOD](https://github.com/Sarah-Rami27/rat_rpg_game/blob/gh-pages/Screenshots/food.png)
  <br /> Screenshot of food dropping!
  
  ## Installation/Usage
@@ -74,8 +74,8 @@ In addition, the Weapon class utilizes the Decorator design pattern to allow us 
  To replay the game use the last command! Enjoy!
  ## Testing
  
- ![VALGRIND](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/gh-pages/Screenshots/valgrind.png)
- ![TESTS](https://github.com/cs100/final-project-nteng004_srami109_mdong016/blob/gh-pages/Screenshots/tests.png)
+ ![VALGRIND](https://github.com/Sarah-Rami27/rat_rpg_game/blob/gh-pages/Screenshots/valgrind.png)
+ ![TESTS](https://github.com/Sarah-Rami27/rat_rpg_game/blob/gh-pages/Screenshots/tests.png)
  
  <br /> This project was validated through Valgrind with 0 memory leaks. Unit tests were done on every class and were all passing. Integrated testing was also performed to test interactions between classes. 
  
