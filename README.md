@@ -17,13 +17,13 @@
   * [CMake](https://cmake.org/) - Software for building code into an executable we can run. 
   * [Google Test Framework](https://github.com/google/googletest) - A collection of tests that we use to unit test our code. 
  
- ### Inputs/Outputs
+ ### Inputs/Outputs <br/>
   #### Inputs: 
    The user will be able to make choices as they progress throughout the game. This will be in the form of combat decisions and choosing whether or not to equip new items.  
   #### Outputs: 
    The program will output to text the console. This text will be in the form of prompts, room/enemy description, combat options, etc.  
  
- ### Design Patterns
+ ### Design Patterns <br/>
   #### Decorator: 
   The decorator design pattern will serve as the basis for our perk system. It will let us attach perks to the player character's equipment as they progress through the game. These perks will be able to stack and have interactions with each other and at any point in the game the character will be able to have multiple perks on them. They will be added or removed depending on actions in the game. We anticpate having issues with modifying the behavior of the player's equipment after the object has already been created. The decorator class allows us to wrap the equipment objects with perks that will alter the behavior or stats of the item.
   #### Abstract Factory:
@@ -34,7 +34,7 @@
 The CharacterFactory class is an implemenation of the Abstract Factory design pattern. It is the interface that the concrete classes, WarriorFactory and MageFactory implement. These two concrete factories will each produce their own version of a Character object. The same applies to both the armor and weapon classes. This allows us to have an associated family of objects within their respective types, such as Warrior or Mage.
 In addition, the Weapon class utilizes the Decorator design pattern to allow us to change certain attributes of any given weapon object. So while the weapon can either be a Warrior weapon or a Mage weapon, we also have the ability to apply perks (decorations) to these objects. The WeaponDecorator class extends the abstract Weapon class and then is extended by several differnt perk classes. Each of these classes modify a specific attribute of the weapon. 
  
- ## Screenshots
+ ### Screenshots
  ![TITLE](/Screenshots/title.png)
  <br /> Screenshot of the Title/Prologue
  
@@ -56,14 +56,14 @@ In addition, the Weapon class utilizes the Decorator design pattern to allow us 
  ![FOOD](/Screenshots/food.png)
  <br /> Screenshot of food dropping!
  
- ## Installation/Usage
+ ### Installation/Usage
  <br /> On this top right of this page, press the green download code button.
  <br /> Press on the clipboard next to HTTPS link
  <br /> Headover to your terminal and input the following lines after each one runs successfully:
-  ```
+  ```sh
   git clone --recursive <COPIED HTTPS URL>
   
-  cd final-project-nteng004_srami109_mdong016
+  cd rat_rpg_game
   
   cmake3 .
   
@@ -71,11 +71,11 @@ In addition, the Weapon class utilizes the Decorator design pattern to allow us 
   
   ./game
   ```
- To replay the game use the last command! Enjoy!
- ## Testing
+ To replay the game use the last command! Enjoy! <br />
+ ### Testing
  
- ![VALGRIND](https://github.com/Sarah-Rami27/rat_rpg_game/blob/gh-pages/Screenshots/valgrind.png)
- ![TESTS](https://github.com/Sarah-Rami27/rat_rpg_game/blob/gh-pages/Screenshots/tests.png)
+ ![VALGRIND](/Screenshots/valgrind.png)
+ ![TESTS](/Screenshots/tests.png)
  
  <br /> This project was validated through Valgrind with 0 memory leaks. Unit tests were done on every class and were all passing. Integrated testing was also performed to test interactions between classes. 
  
