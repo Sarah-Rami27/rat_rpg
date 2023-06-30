@@ -64,7 +64,7 @@ In addition, the Weapon class utilizes the Decorator design pattern to allow us 
 ```sh
 git clone --recursive <COPIED HTTPS URL>
 
-cd rat_rpg_game
+cd rat_rpg
 
 cmake3 .
 
